@@ -1,0 +1,379 @@
+*{
+    box-sizing: border-box;
+}
+html {
+    font-weight: 400;
+    overflow-x: hidden;
+}
+html, div, footer, header, ul {
+    display: block;
+}
+h1, h2, h3 {
+    font-family: sans-serif;
+}
+
+   
+body {
+    background-color: #f3f3ee;
+    color: #1b1b1b;
+    font-family: georgia, serif;
+    font-size: 1.1em;
+    
+}
+header {
+    width: auto;
+    
+}
+
+.container {
+    max-width: 70em;
+}
+.container::after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+nav {
+    width: 100%;
+    margin: 0;
+    padding: 15px 0 10px 0;
+    display: block;
+}
+.logo {
+    display: inline-block;
+    margin: 10px 0 10px 0;
+}
+a.logo-item-link {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 10px 0;
+    color: #306134;
+    font-family: serif;
+    text-decoration: none;
+}
+a {
+    display: inline;
+}
+span.logo-sub {
+    color: #7ea684;
+    display: block;
+    font-size: 0.8em;
+    font-style: italic;
+}
+ul.menu {
+    border-top: 2px solid #d8dac9;
+    clear: both;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+ul {
+    list-style-type: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li {
+    text-align:center;
+}
+li.i {
+    text-align: left;
+
+}
+
+.is-active a.menu-item-link {
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 100%);
+    background-repeat: no-repeat;
+    color: #306134;
+}
+a.menu-item-link:hover {
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 100%);
+    background-repeat: no-repeat;
+    color: #306134;
+}
+.menu-item {
+    line-height: 90%;
+    display: inline-block;
+}
+a.menu-item-link {
+    display: inline-block;
+    border-width: 0px 2px 0px 0px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #d8dac9, rgba(255,255,255,0)) 1 100%;
+    color: #ef3b24;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+form.menu-item-buscar {
+    top: 0.5em;
+    position: absolute;
+    right: 0;
+}
+
+label {
+    cursor: default;
+}
+.search-field {
+    width: 20em;
+    height: 2em;
+}
+.input-submit {
+    width: auto;
+    height: 2em;
+}
+.section {
+    padding-bottom: 2.5em;
+}
+
+h2.titulo-section {
+    padding-bottom: 1.5em;
+    text-align: center;
+    font-weight: normal;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+.image-section {
+    max-width: 12em;
+    max-height: 25em;
+}
+.recetas {
+    float: left;
+    padding-left: 1em;
+}
+
+.recetas img {
+    width: 100%;
+}
+
+.tittle-recetas {
+    padding-top: 1.1em;
+    text-align: center;
+}
+.titulo-aside h3{
+    font-weight: normal;
+    padding: 1.5em 0 0.5em 0;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+
+}
+.list-i {
+    background: rgba(255,255,255,0.6);
+    border: 1px solid #D8DAC9;
+}
+div.gallery {
+  margin: 1.5em;
+  display: inline-block;
+  width: 300px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+    background-color: #d8dac9;
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+footer {
+    border-top: 2px solid #d8dac9;
+    margin: 20px 0 0 0;
+    padding: 0 0 40px 0;
+    width: 100%;
+}
+.footer-box {
+    float: left;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 30px 0 150px;
+}
+
+
+h3.heading-footer {
+    color: #306134;
+    font-size: 0.95em;
+}
+.footer-copyright {
+    text-align: center;
+    border-top: 2px solid #D8DAC9;
+    clear: both;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    line-height: 170%;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+.footer-punto {
+    color: #7EA684;
+    padding: 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* adaptabilidad a 78em o 1248px, 45em o 720px ----30em o 480px*/
+
+@media screen and (min-width: 78em){
+.container {
+    margin: 0 auto;
+}
+}
+
+
+
+
+
+@media screen and (min-width: 0){
+ul {
+    font-size: 1em;
+    line-height: 140%;
+}
+}
+
+
+
+
+
+
+@media screen and (min-width: 45em){
+
+ul.menu {
+    margin: 20px 0 0 0;
+}
+.menu-item {
+    line-height: 140%;
+}
+a.menu-item-link {
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    padding: 9px 20px 13px 20px;
+    text-align: left;
+    width: auto;
+    border-width:0px, 2px, 0px, 0px;
+    
+}
+a.menu-item-link.Inicio, a.menu-item-link.Recetas, a.menu-item-link.Nutricion, a.menu-item-link.Descubre, a.menu-item-link.Nosotros {
+    width: auto;
+}
+a.menu-item-link.Recetas{
+    border-width: 0px 2px 0px 0px;
+    display: inline-block;
+}
+.section {
+    height: auto;
+    border-right: 1px solid #D8DAC9;
+    float: left;
+    margin: 0 0 10px 0;
+    width: 76%;
+}
+.container-banner {
+    background-color: #7ea684;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+}
+.container-banner a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #D8DAC9;
+    font-style: italic;
+    
+
+}
+.tittle-banner {
+    text-align: center;
+}
+.subtittle-banner {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    margin: 52px auto 0;
+
+}
+section h2 {
+    font-family: Georgia;
+    color: #1e282f;
+    text-transform: none;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    text-align: center;
+}
+span.subtittle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #a3865b;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 5px;
+}
+.aside {
+    padding: 0 20px 0 20px;
+    float: left;
+    width: 18%;
+}
+
+
+.footer-box {
+    float: left;
+    margin-bottom: 0;
+    
+}
+
+
+
+@media screen and (min-width: 30em){
+header {
+    margin-bottom: 20px;
+}
+.logo {
+    margin: 20px 0 10px 0;
+}
+ul.menu {
+    padding: 0;
+    text-align: left;
+}
+ul {
+    font-size: 1.05em;
+    line-height: 150%;
+}
+p {
+    font-size: 1.1em;
+    line-height: 150%;
+}
+
+}
+}
