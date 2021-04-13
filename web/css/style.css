@@ -128,7 +128,7 @@ label {
     width: auto;
     height: 2em;
 }
-.section {
+.recetas {
     padding-bottom: 2.5em;
 }
 
@@ -146,12 +146,12 @@ h2.titulo-section {
     max-width: 12em;
     max-height: 25em;
 }
-.recetas {
+.items-recetas {
     float: left;
     padding-left: 1em;
 }
 
-.recetas img {
+.items-recetas img {
     width: 100%;
 }
 
@@ -286,7 +286,7 @@ a.menu-item-link.Recetas{
     border-width: 0px 2px 0px 0px;
     display: inline-block;
 }
-.section {
+.recetas {
     height: auto;
     border-right: 1px solid #D8DAC9;
     float: left;
@@ -340,7 +340,7 @@ span.subtittle {
     display: block;
     margin-top: 5px;
 }
-.aside {
+aside {
     padding: 0 20px 0 20px;
     float: left;
     width: 18%;
@@ -374,7 +374,8 @@ span.subtittle {
     /*Damos formato a los fab*/
     color:grey;
     font-size: 2rem;
-}/*Fin parte redes sociales*/
+}
+/*Fin parte redes sociales*/
 
 
 .footer-box {

@@ -13,6 +13,7 @@
     
 </head>
 <body>
+    <!--El header lo acotamos a 70em con un div container. En el div incluimos el nav con un div para el logo y una lista ul que contiene los items del menú más el item de búsqueda en formato form-->
 
     <header>
         <div class="container">
@@ -45,13 +46,13 @@
    
 
 
-    
+    <!--Con otro div contenedor igual al anterior acotamos a 70em el siguiente espacio que contendrá una galeria de recetas en formato lista ul (la idea es incluir un botón de previo y un botón de siguiente con más recetas que queden escondidas) y un aside para noticias o publicidad-->
     <div class="container">
         
-            <ul class="section">
+            <ul class="recetas">
                 <h2 class="titulo-section">Recetas del mes
                 </h2>
-                <li class="recetas">
+                <li class="items-recetas">
                     <a target="_blank" href="css/images/rollito de esparragos y bacon.jpg">
                         <img src="css/images/rollito de esparragos y bacon.jpg" alt="receta" class="image-section" height="160" width="230">
                     </a>
@@ -59,13 +60,13 @@
 
                     </div>             
                 </li>
-                <li class="recetas">
+                <li class="items-recetas">
                     <a target="_blank" href="css/images/ensalada con aceite de sésamo.jpg">
                         <img src="css/images/ensalada con aceite de sésamo.jpg" alt="receta" class="image-section" height="160" width="230">
                     </a>
                     <div class="tittle-recetas">Ensalada con aceite de sésamo</div> 
                 </li>
-                <li class="recetas">
+                <li class="items-recetas">
                     <a target="_blank" href="css/images/boquerones bilbaina.jpg">
                         <img src="css/images/boquerones bilbaina.jpg" alt="" class="image-section" height="160" width="230">  
                     </a>  
@@ -74,7 +75,7 @@
             </ul>
     
         
-        <div class="aside">
+        <aside>
             <div class="titulo-aside">
                 <h3>Ingredientes de temporada</h3>
             </div>
@@ -87,13 +88,17 @@
                 <li class="i">Caballas y boquerones</li>
                 <li class="i">Fresas</li>
             </ul>
-        </div>   
+        </aside>   
     </div>
+
+    <!--El siguiente espacio es un div para banner que tenga un width del 100%-->
     <div class="banner">
             <div class="container-banner">
                 <a href=""><h2 class="tittle-banner">Descubre 7 comidas saludable</h2><p class="subtittle-banner">que se cocinan en menos de 20 minutos</p></a>
             </div>
     </div>
+
+    <!--De nuevo un contenedor div con max-width 70em, dentro de él metemos el section que será una zona con una galeria de recetas rápidas, esta vez cada receta irá en un div gallery con un enlace, y se incluirá una corta descripción-->
     <div class="container">
     <section>
         <h2>Consigue inspiración</h2>
@@ -143,6 +148,8 @@
         </div>
     </section>
     </div>
+
+    <!--El footer va en un contenedor div de 70 em y la idea es hacer dos partes, un div que se divida en 2 cajas para suscripciones, artículos antiguos, etc y y footer abajo para el copyright-->
 
 
     <footer>
