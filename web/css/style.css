@@ -21,10 +21,26 @@ body {
     
 }
 header {
-    width: auto;
+    width: 100%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f3f3ee;
     
 }
-
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: 1px solid rgba(41,41,41,.2)
+}
+button, input {
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
 .container {
     max-width: 70em;
 }
@@ -48,15 +64,16 @@ a.logo-item-link {
     font-size: 2.5em;
     margin: 0;
     padding: 10px 0;
-    color: #306134;
+    color: #1e6f5c;
     font-family: serif;
     text-decoration: none;
 }
 a {
+    color: #1e282f;
     display: inline;
 }
 span.logo-sub {
-    color: #7ea684;
+    color: #289672;
     display: block;
     font-size: 0.8em;
     font-style: italic;
@@ -88,12 +105,12 @@ li.i {
 .is-active a.menu-item-link {
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 100%);
     background-repeat: no-repeat;
-    color: #306134;
+    color: #1e6f5c;
 }
 a.menu-item-link:hover {
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 100%);
     background-repeat: no-repeat;
-    color: #306134;
+    color: #1e6f5c;
 }
 .menu-item {
     line-height: 90%;
@@ -104,7 +121,7 @@ a.menu-item-link {
     border-width: 0px 2px 0px 0px;
     border-style: solid;
     border-image: linear-gradient(to bottom, #d8dac9, rgba(255,255,255,0)) 1 100%;
-    color: #ef3b24;
+    color: #fd193f;
     font-family: sans-serif;
     font-weight: bold;
     text-decoration: none;
@@ -112,7 +129,7 @@ a.menu-item-link {
 }
 
 form.menu-item-buscar {
-    top: 0.5em;
+    top: 0.3em;
     position: absolute;
     right: 0;
 }
@@ -121,10 +138,13 @@ label {
     cursor: default;
 }
 .search-field {
-    width: 20em;
+    border: 2px solid #289672;
+    width: 15em;
     height: 2em;
 }
 .input-submit {
+    color: #fff;
+    background-color: #289672;
     width: auto;
     height: 2em;
 }
@@ -196,22 +216,52 @@ div.desc {
 
 footer {
     border-top: 2px solid #d8dac9;
-    margin: 20px 0 0 0;
-    padding: 0 0 40px 0;
     width: 100%;
 }
-.footer-box {
-    float: left;
+.footer-box-right {
+    float: right;
     position: relative;
     margin-bottom: 20px;
-    padding: 0 30px 0 150px;
+    padding: 1em;
+    width: 50%; 
 }
-
-
 h3.heading-footer {
-    color: #306134;
+    text-transform: uppercase;
+    color: #289672;
     font-size: 0.95em;
 }
+.newsletter-block {
+    overflow: auto;
+    display: block;
+    height: 2rem;
+    padding-bottom: 1em;
+    margin-bottom: .75rem;
+    display: inline;
+
+}
+.newsletter-form button {
+    padding: 0.8em;
+    width: 33%;
+    border: 1px solid #fff;
+    background-color: #289672;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+    display: inline;
+    margin-left: 0.5em;
+
+}
+.newsletter-email {
+    color: rgba(90,90,90,.7);
+    font-size: .95rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 40%;
+    border: 2px solid #289672;
+    padding: 0.8em;
+}
+
 .footer-copyright {
     text-align: center;
     border-top: 2px solid #D8DAC9;
@@ -271,7 +321,7 @@ ul.menu {
     line-height: 140%;
 }
 a.menu-item-link {
-    font-size: 0.8em;
+    font-size: 0.9em;
     letter-spacing: 1px;
     padding: 9px 20px 13px 20px;
     text-align: left;
@@ -294,7 +344,7 @@ a.menu-item-link.Recetas{
     width: 76%;
 }
 .container-banner {
-    background-color: #7ea684;
+    background-color: #29bb89;
     display: inline-block;
     position: relative;
     width: 100%;
