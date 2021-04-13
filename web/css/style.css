@@ -179,15 +179,48 @@ h2.titulo-section {
     padding-top: 1.1em;
     text-align: center;
 }
-.titulo-aside h3{
-    font-weight: normal;
-    padding: 1.5em 0 0.5em 0;
-    text-align: center;
-    font-family: Georgia, serif;
-    font-weight: 400;
-    font-size: 1.1em;
-    letter-spacing: 1px;
 
+/*PARTE ASIDE*/
+
+.titulo-aside{
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    align-items: center;
+    background: url(/web/css/images/thermomix2.jpg); /*Colocamos una imagen de fondo*/
+    margin-bottom: 20px;
+    
+}
+.titulo-aside p{
+    background: blanchedalmond;
+    color: brown;
+}
+.titulo-aside h2{
+    background: blanchedalmond;
+    color: brown;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 300px;
+
+}
+.boton1{
+    /*Que se muestre como un boton*/
+    cursor: pointer;
+    display: inline-block;
+    border: 1;
+    font-weight: bold;
+    /*En el padding el primer numero significa arriba y abajo y el segundo hacia los lados*/
+    padding: 10px 5px;
+    background: brown;
+    color: blanchedalmond;
+    font-size: 15px;
+    border: 3px solid blanchedalmond;
+    
+    
+    
+}
+.boton1:hover{/*Con hover le damos dinamismo a nuestro boton*/
+    /*Opacidad al colocar el puntero encima*/
+    opacity: 0.4;
 }
 .list-i {
     background: rgba(255,255,255,0.6);

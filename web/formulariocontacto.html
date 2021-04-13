@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <h1>Formulario de contacto</h1>
+        <!--
+            Un formulario está situado dentro de una etiqueta <form> y contiene elementos de formulario que 
+            permiten a nuestros lectores de la pagina web interactuar. 
+    
+            El atributo action determina el proceso al que se enviarán los datos introducidos por el usuario 
+            cuando se pulse el botón submit.
+    
+            El atributo method determina la forma en que se enviarán los datos. Con el valor "get" los datos 
+            se envían en la cabecera de la petición HTTP, por lo que serán visibles en la URL. Este 
+            método no es recomendable si los datos son confidenciales. Con el valor "post" los datos se 
+            envían en el cuerpo de la petición HTTP (body), por lo que no serán visibles en la URL.
+        -->
+        <form action="ContactoAministracion.jsp" method="post">
+            <!--
+                <fieldset> Genera un marco visible  que encierra los datos del formulario.
+                <legend> Colocado inmediatamente después de una etiqueta <fieldset>, permite colocarle 
+                una etiqueta de texto (título).
+            -->
+            <fieldset><legend>Datos personales:</legend>
+                <!--
+                    <label> Define una etiqueta estática, que normalmente estará asociada con un elemento de 
+                    campo de formulario que se identifica mediante el atributo for.
+                -->
+                <label for="nombre">Nombre: </label>
+                <!--
+                    La etiqueta <input> define un elemento de campo de formulario. Estos son sus atributos más 
+                    comunes:
+    
+                    1) type: tipo de campo. El valor más usual es text (caja de texto).
+    
+                    2) value: valor que tomará el campo cuando el usuario escriba en él.
+    
+                    3) readonly: solo lectura. No puede ser modificado por el usuario.
+    
+                    4) name: el valor de este atributo será el que usará el recurso de servidor para recuperar 
+                    el valor del campo. Además si hay un label con el atributo "for" con el valor del
+                    name, cuando pinchemos en ese label nos hara focus a dicho "input"
+                -->
+                <input type="text" name="nombre" />
+                <br />
+                <label for="apellidos">Apellidos: </label>
+                <input type="text" name="Apellidos"/>
+                <br/>
+                <label for="Asunto">Asunto: </label>
+                <input type="text" name="Asunto"> 
+                <br/>
+                <br/>
+                <label for="mensaje">Mensaje: </label>
+                <br />	
+                <textarea rows="5" cols="80" name="mensaje"></textarea>
+                
+                <br/>
+                <br/>
+                <label for="terminos">Acepta los terminos de uso? </label>
+                <br/>	
+                He leido y acepto los terminos de uso <input type="checkbox" name="terminos" value="Y" />
+                <br/>	
+                <br/>	
+                <input type="submit" value="Enviar datos" />
+                <!--
+                    input type="reset", Se representa como un botón y cuando el usuario hace clic en él, se 
+                    borra el contenido de todos los campos del formulario.
+                -->
+                <input type="reset" value="Limpiar formulario" />
+            </fieldset>
+        </form>
+</body>
+</html>

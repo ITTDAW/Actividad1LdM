@@ -8,7 +8,7 @@
 </head>
 <body>
     <body>
-        <h1>Formulario de contacto</h1>
+        <h1>Formulario de registro en Recetamania</h1>
         <!--
             Un formulario está situado dentro de una etiqueta <form> y contiene elementos de formulario que 
             permiten a nuestros lectores de la pagina web interactuar. 
@@ -21,7 +21,7 @@
             método no es recomendable si los datos son confidenciales. Con el valor "post" los datos se 
             envían en el cuerpo de la petición HTTP (body), por lo que no serán visibles en la URL.
         -->
-        <form action="ContactoAministracion.jsp" method="post">
+        <form action="Participaenelconcurso.jsp" method="post">
             <!--
                 <fieldset> Genera un marco visible  que encierra los datos del formulario.
                 <legend> Colocado inmediatamente después de una etiqueta <fieldset>, permite colocarle 
@@ -50,11 +50,11 @@
                 <input type="text" name="nombre" />
                 <br />
                 <label for="apellidos">Apellidos: </label>
-                <input type="text" name="Apellidos">
+                <input type="text" name="Apellidos"/>
                 <br/>
                 <!-- Con el type date desplegaremos un calendario en el formulario que tendrá diferente forma 
                 dependiendo del navegador que uticemos -->
-                <label for="Año de Nacimiento">Edad: </label>
+                <label for="Año de Nacimiento">Año de Nacimiento: </label>
                 <input type="date" name="Año de Nacimiento" />
                 <br/>
                 <label for="pass">Password: </label>
@@ -78,22 +78,22 @@
                 -->
                 <label for="estado_civil">Estado civil: </label>
                 <br />	
-                <input type="radio" name="estado_civil" value="S" />Soltero<br />	
-                <input type="radio" name="estado_civil" value="C" />Casado<br />	
-                <input type="radio" name="estado_civil" value="V" />Viudo<br />	
-                <input type="radio" name="estado_civil" value="D" />Divorciado<br />	
+                <input type="radio" name="estado_civil" value="S" />Soltero/a<br />	
+                <input type="radio" name="estado_civil" value="C" />Casado/a<br />	
+                <input type="radio" name="estado_civil" value="V" />Viudo/a<br />	
+                <input type="radio" name="estado_civil" value="D" />Divorciado/a<br />	
     
                 <!--
                     input type="checkbox", Similar a type="radio" pero esta vez se permite seleccionar
                     varias opciones.
                 -->
                 <br/>
-                <label for="hobbies">Hobbies: </label>
+                <label for="favoritas">Recetas favoritas: </label>
                 <br />	
-                <input type="checkbox" name="hobbies" value="M" />Música<br />	
-                <input type="checkbox" name="hobbies" value="L" />Lectura<br />	
-                <input type="checkbox" name="hobbies" value="D" />Deportes<br />	
-                <input type="checkbox" name="hobbies" value="V" />Videojuegos<br />	
+                <input type="checkbox" name="favoritas" value="A" />Aperitivos<br />	
+                <input type="checkbox" name="favoritas" value="PR" />Platos principales<br />	
+                <input type="checkbox" name="favoritas" value="R" />Recetas rápidas<br />	
+                <input type="checkbox" name="favoritas" value="V" />Postres<br />	
                 <br/>
                 <!--
                     <select><option>, La etiqueta <select> representa una lista desplegable de opciones 
@@ -111,13 +111,13 @@
                     uno. Aunque tambien es posible permitir varias opciones con el atributo "multiple"
                     (no suele ser muy habitual)
                 -->
-                <label for="dia_nacimiento">Escoja el día en que nació: </label>
+                <label for="conocimiento">¿Como nos ha conocido?: </label>
                 <select name="dia_nacimiento">
-                    <option value="LUN">Lunes</option>
-                    <option value="MAR">Martes</option>
-                    <option value="MIE" selected>Miércoles</option>
-                    <option value="JUE">Jueves</option>
-                    <option value="VIE">Viernes</option>
+                    <option value="CON">Por un conocido</option>
+                    <option value="PUB">Por publicidad en web</option>
+                    <option value="BUS" selected>En busqueda de google</option>
+                    <option value="TV">Por la TV</option>
+                    <option value="FO">En un foro</option>
                 </select>
                 <br />
                 <!--
@@ -130,7 +130,7 @@
                         3) readonly: solo lectura. (este tambien se puede encontrar en los text y en otros)
                 -->
                 <br/>
-                <label for="observaciones">Observaciones: </label>
+                <label for="observaciones">Cuéntanos mas sobre ti: </label>
                 <br />	
                 <textarea rows="5" cols="80" name="observaciones"></textarea>
                  <!--
