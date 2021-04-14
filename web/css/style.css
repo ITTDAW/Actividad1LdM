@@ -29,11 +29,6 @@ header {
     background-color: #f3f3ee;
     
 }
-input {
-    -webkit-appearance: none;
-    border-radius: 0;
-    border: 1px solid rgba(41,41,41,.2)
-}
 button, input {
     overflow: visible;
     margin: 0;
@@ -49,7 +44,7 @@ button, input {
     display: table;
     content: "";
 }
-
+/*ESTILOS PARA EL NAV */
 nav {
     width: 100%;
     margin: 0;
@@ -60,7 +55,7 @@ nav {
     display: inline-block;
     margin: 10px 0 10px 0;
 }
-a.logo-item-link {
+.logo-item-link {
     font-size: 2.5em;
     margin: 0;
     padding: 10px 0;
@@ -69,16 +64,13 @@ a.logo-item-link {
     text-decoration: none;
     font-size: 3em;
 }
-a {
-    color: #1e282f;
-    display: inline;
-}
 span.logo-sub {
     color: #289672;
     display: block;
     font-size: 0.8em;
     font-style: italic;
 }
+
 ul.menu {
     border-top: 2px solid #d8dac9;
     clear: both;
@@ -89,18 +81,13 @@ ul.menu {
 ul {
     list-style-type: none;
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    font-size: 1em;
+    line-height: 140%;
+    
 }
+
 li {
     text-align:center;
-}
-li.i {
-    text-align: left;
-
 }
 
 .is-active a.menu-item-link {
@@ -128,9 +115,10 @@ a.menu-item-link {
     text-decoration: none;
     text-transform: uppercase;
 }
-
+/*barra de búsqueda*/
 form.menu-item-buscar {
     top: 0.3em;
+    /*lo pongo en posición absoluta para llevarlo a la derecha*/
     position: absolute;
     right: 0;
 }
@@ -143,21 +131,15 @@ label {
     width: 15em;
     height: 2em;
 }
-.search button {
-    color: #fff;
-    background-color: #289672;
-    width: auto;
-    height: 2em;
-    width: 2em;
-    float: right;
-    border: none;
-}
+
+/*AQUI ACABAN LOS ESTILOS DEL NAV*/
+
 .recetas {
     padding-bottom: 2.5em;
+    position: relative;
 }
 
 h2.titulo-section {
-    padding-bottom: 1.5em;
     text-align: center;
     font-weight: normal;
     font-family: Georgia, serif;
@@ -172,16 +154,11 @@ h2.titulo-section {
 }
 .items-recetas {
     float: left;
-    padding-left: 1em;
+    padding: 1em 1em 1em 1em;
 }
 
 .items-recetas img {
     width: 100%;
-}
-
-.tittle-recetas {
-    padding-top: 1.1em;
-    text-align: center;
 }
 
 /*PARTE ASIDE*/
@@ -236,12 +213,7 @@ div.gallery {
   max-width: 330px;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
 .gallery img {
-    background-color: #d8dac9;
     width: 100%;
 }
 
@@ -249,6 +221,8 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
+
+/*ESTILOS PARA EL FOOTER*/
 
 footer {
     border-top: 2px solid #d8dac9;
@@ -297,6 +271,10 @@ h3.heading-footer {
     border: 2px solid #289672;
     padding: 0.8em;
 }
+a {
+    color: #1b1b1b;
+    
+}
 
 .footer-copyright {
     text-align: center;
@@ -313,18 +291,11 @@ h3.heading-footer {
     padding: 0 15px;
 }
 
+/*ACABA EL ESTILO DE FOOTER*/
 
 
 
-
-
-
-
-
-
-
-
-/* adaptabilidad a 78em o 1248px, 45em o 720px ----30em o 480px*/
+/* MEDIA QUERIES a 78em o 1248px, 45em o 720px ----30em o 480px*/
 
 @media screen and (min-width: 78em){
 .container {
@@ -333,23 +304,9 @@ h3.heading-footer {
 }
 
 
-
-
-
-@media screen and (min-width: 0){
-ul {
-    font-size: 1em;
-    line-height: 140%;
-}
-}
-
-
-
-
-
-
 @media screen and (min-width: 45em){
 
+/*MENÚ*/
 ul.menu {
     margin: 20px 0 0 0;
 }
@@ -372,13 +329,32 @@ a.menu-item-link.Recetas{
     border-width: 0px 2px 0px 0px;
     display: inline-block;
 }
+/*barra de búsqueda*/
+.search button {
+    color: #fff;
+    background-color: #289672;
+    width: auto;
+    height: 2em;
+    width: 2em;
+    float: right;
+    border: none;
+}
+/*lista de recetas en portada*/
 .recetas {
     height: auto;
     border-right: 1px solid #D8DAC9;
     float: left;
-    margin: 0 0 10px 0;
+    margin: 0;
     width: 76%;
 }
+.image-section {
+    float: left;
+    width: 15em;
+    height: 10em;
+    padding-bottom: 1em;
+}
+
+/*banner publicidad central*/
 .container-banner {
     background-color: #29bb89;
     display: inline-block;
@@ -401,6 +377,8 @@ a.menu-item-link.Recetas{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
+/*hasta aqui el banner*/
+
 h2 {
     margin: 52px auto 0;
 
