@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <!-- Llamamos a nuestro archivo JS para la comprobacion de contraseñas. -->
+    <script type="text/javascript" src="/web/JS/Contraseñas.js"></script>
 </head>
 <body>
     <body>
@@ -20,8 +22,13 @@
             se envían en la cabecera de la petición HTTP, por lo que serán visibles en la URL. Este 
             método no es recomendable si los datos son confidenciales. Con el valor "post" los datos se 
             envían en el cuerpo de la petición HTTP (body), por lo que no serán visibles en la URL.
+            
+            El atributo onsubmit se valora en el momento de enviar el formulario, en este caso, comprueba 
+            nuestra funcion de JS Contraseñas y si son iguales se envia el formulario, si son distintas
+            no se envia (recordemos que nuestra funcion devuelve un true o false y un mensaje).
         -->
-        <form action="Participaenelconcurso.jsp" method="post">
+
+        <form action="Participaenelconcurso.jsp" name="f1" method="post" onsubmit="return comprobarClave()">
             <!--
                 <fieldset> Genera un marco visible  que encierra los datos del formulario.
                 <legend> Colocado inmediatamente después de una etiqueta <fieldset>, permite colocarle 
@@ -57,12 +64,29 @@
                 <label for="Año de Nacimiento">Año de Nacimiento: </label>
                 <input type="date" name="Año de Nacimiento" />
                 <br/>
-                <label for="pass">Password: </label>
-                <input type="password" name="pass" />
+                <label for="usuario">Nombre de Usuario:</label>
+                <input type="text" name="Nombre de Usuario"/>
+                <br/>
+                
+                
+                    <label for="password"> Contraseña:</label>
+                    <!-- Con pattern le exigimos que tipo de caracteres aceptamos -->
+                    <input type="password" name="clave1" size="20"  pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Una contraseña válida es un conjunto de caracteres, donde cada uno consiste de una letra mayúscula o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menos un dígito" required/>
+                    <br>
+                    <label for="password">Repite Contraseña</label>
+
+                   <input type="password" name="clave2" size="20"  pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Una contraseña válida es un conjunto de caracteres, donde cada uno consiste de una letra mayúscula o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menos un dígito" required/>
+                    
+                   
+                    
+
                 <!-- 
                     <input type=”hidden”>, Campo oculto. Puede ser útil para enviar una información al 
                     servidor que no queremos que sea vista por el usuario.
                 -->
+                <br/>
+                <label for="email">Correo Eléctronico:</label>
+                <input type="email" name="email" required/>
                 <br/>
                 <input id="identificador" type="hidden" value="123"/>
                 <br/>
@@ -147,12 +171,13 @@
                     realiza la petición HTTP al programa de servidor especificado en el atributo action.
                 -->
                 <br/>	
-                <input type="submit" value="Enviar datos" />
+                
+                <input type="submit" value="Enviar datos"   />
                 <!--
                     input type="reset", Se representa como un botón y cuando el usuario hace clic en él, se 
                     borra el contenido de todos los campos del formulario.
                 -->
-                <input type="reset" value="Limpiar formulario" />
+                <input type="reset" value="Limpiar formulario"/>
             </fieldset>
         </form>
     </body>
