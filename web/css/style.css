@@ -67,6 +67,7 @@ a.logo-item-link {
     color: #1e6f5c;
     font-family: serif;
     text-decoration: none;
+    font-size: 3em;
 }
 a {
     color: #1e282f;
@@ -135,18 +136,21 @@ form.menu-item-buscar {
 }
 
 label {
-    cursor: default;
+    cursor: pointer;
 }
 .search-field {
     border: 2px solid #289672;
     width: 15em;
     height: 2em;
 }
-.input-submit {
+.search button {
     color: #fff;
     background-color: #289672;
     width: auto;
     height: 2em;
+    width: 2em;
+    float: right;
+    border: none;
 }
 .recetas {
     padding-bottom: 2.5em;
@@ -229,17 +233,16 @@ h2.titulo-section {
 div.gallery {
   margin: 1.5em;
   display: inline-block;
-  width: 300px;
+  max-width: 330px;
 }
 
 div.gallery:hover {
   border: 1px solid #777;
 }
 
-div.gallery img {
+.gallery img {
     background-color: #d8dac9;
     width: 100%;
-    height: auto;
 }
 
 div.desc {
