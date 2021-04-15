@@ -56,6 +56,14 @@ nav {
     display: inline-block;
     margin: 10px 0 10px 0;
 }
+/*Estilos para el boton que aparece en dispositivos moviles*/
+.menumovil{
+    cursor: pointer;
+    
+    z-index: 2;
+    display: none; 
+/* Con esto conseguimos hacer invisible el boton, hasta que la media querie actue */
+}
 .logo-item-link {
     font-size: 2.5em;
     margin: 0;
@@ -340,6 +348,69 @@ a {
 
 /*ACABA EL ESTILO DE FOOTER*/
 
+
+
+
+/*Cuando se reduce el ancho de pantalla aproximadamente a 1156px encontramos un problema con la 
+barra de navegacion, ya que esta, empieza a pisarse. Por lo tanto, lo que vamos a hacer es que cuando esta
+resolucion se alcance, la barra de menu cambia de disposicion a display block position absolute
+colocandose en vertical, y la esconderemos (transform:translateX(suficiente distancia en pixeles
+para esconderla)  para que solamente se vea cuando pulsemos un boton que  se va a introducir en el lado 
+izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos ese boton, el menu aparecera*/
+
+@media (max-width: 1156px) {
+    .menumovil {
+      display: block;
+    }
+    .menumovil:hover {
+        opacity: 0.5;
+      }
+      .container ul.menu {
+        display: block;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #09b67c;
+       
+        width: 40%;
+        height: 100%;
+       
+        opacity: 0.9;
+        padding: 60px;
+        margin-top: 200px;
+        padding-bottom: 495px;
+        /*Con transform translateX movemos el menu entero en el eje de coordenadas X para ocultarlo*/
+        transform: translateX(-700px);
+        /*Con transition transform le damos un poco de suavidad a la hora de sacar y meter el menu con el boton*/
+        transition: transform 0.5s ease-in-out;
+        border-top: 0px;
+        border-width: 0px;
+      }
+      
+      .container ul.menu li {
+        display: block;
+        
+        border-bottom: #ccc solid 1px;
+        font-size: 18px;
+        
+      }
+      .menu-item a{
+          margin-bottom: 20px;
+          
+      }
+      .menu-item-buscar{
+          margin-top: 450px;
+         
+    
+      }
+    
+      /*Con la clase show llamamos al JS para que interactue con la barra menu y le decimos que vuelva 
+      a mover este menu a -20px */
+      .container ul.menu.show {
+        transform: translateX(-20px);
+      }
+    }
 
 
 /* MEDIA QUERIES a 78em o 1248px, 45em o 720px ----30em o 480px*/

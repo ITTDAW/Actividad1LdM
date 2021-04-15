@@ -26,6 +26,10 @@
                     <a href="http://recetamania" class="logo-item-link">Recetamanía</a>
                     <span class="logo-sub">Recetas sencillas para una vida saludable</span>
                 </div>
+                 <!-- Creamos el boton del menu para adaptabilidad a diferentes resoluciones -->
+                 <div class="menumovil">
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
                 
                 <!--Menú de páginas-->
                 <ul class="menu">
@@ -201,6 +205,10 @@
     </div>
     
 
+<!-- Cargamos al final del body el JS de la escucha del boton para la adaptacion del menu en dispositivos
+    de menos resolucion. La razon de que vaya al final del body es que necesita que el DOM este cargado, 
+    sino, la ejecucion nos daria un error.     -->
+    <script src="JS/Adaptacion.js"></script> 
 
     
         
