@@ -1,0 +1,314 @@
+
+
+
+/*Cuando se reduce el ancho de pantalla aproximadamente a 1156px encontramos un problema con la 
+barra de navegacion, ya que esta, empieza a pisarse. Por lo tanto, lo que vamos a hacer es que cuando esta
+resolucion se alcance, la barra de menu cambia de disposicion a display block position absolute
+colocandose en vertical, y la esconderemos (transform:translateX(suficiente distancia en pixeles
+para esconderla)  para que solamente se vea cuando pulsemos un boton que  se va a introducir en el lado 
+izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos ese boton, el menu aparecera*/
+
+@media (max-width: 1156px) {
+    .container{
+        margin: 0 auto;
+    }
+    .menumovil {
+      display: block;
+    }
+    .menumovil:hover {
+        opacity: 0.5;
+      }
+      .container ul.menu {
+        display: block;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #09b67c;
+       /* Decimos que este menu va a tener una ocupacion en la pantalla en principio de estos valores,
+       mas tarde para otros dispositivos, los variaremos. */
+        width: 40%;
+        height: 100%;
+       
+        opacity: 0.9;
+        padding: 60px;
+        margin-top: 200px;
+        padding-bottom: 495px;
+        /*Con transform translateX movemos el menu entero en el eje de coordenadas X para ocultarlo*/
+        transform: translateX(-700px);
+        /*Con transition transform le damos un poco de suavidad a la hora de sacar y meter el menu con el boton*/
+        transition: transform 0.5s ease-in-out;
+        border-top: 0px;
+        border-width: 0px;
+      }
+      
+      .container ul.menu li {
+        display: block;
+        
+        border-bottom: #ccc solid 1px;
+        font-size: 18px;
+        
+      }
+      .menu-item a{
+          margin-bottom: 20px;
+          
+      }
+      .menu-item-buscar{
+          margin-top: 450px;
+         
+    
+      }
+    
+      /*Con la clase show llamamos al JS para que interactue con la barra menu y le decimos que vuelva 
+      a mover este menu a -20px */
+      .container ul.menu.show {
+        transform: translateX(-20px);
+      }
+    }
+    
+    
+
+/* 
+ Adaptabilidad para Iphone 12 pro en modo horizontal
+*/
+
+/* Cuando se hacen las adaptabilidades a diferentes medios moviles, tablets, moviles,etc, hay que tener 
+cuidado a la hora de colocar estas reglas, ya que un orden no adecuado, hacen que estas se pisen y 
+desordenen de una forma los estilos que no es el resultado que buscas . La forma de adaptar, es ir viendo
+en el navegador de Chrome o algun otro programa como va variando la composicion de nuestra pagina web al 
+cambiar la resolucion e ir adaptando estos cambios para realizar un posicionamiento de nuestros items correcto*/
+
+@media (min-width: 390px) and (max-width: 844px) and (orientation: landscape) {
+  .container ul.menu {
+    width: 45%;
+    padding-top: 5px;
+    margin-top: 130px;
+
+  }  
+
+  .container ul.menu li {
+    display: block;
+    
+    border-bottom: #ccc solid 1px;
+    font-size: 10px;
+    
+  }
+  .menu-item a{
+      margin-bottom:0px;
+      padding:10px;
+
+      
+  }
+  
+  .logo{
+    margin-top: 0px;
+    
+  }
+  .logo-item-link {
+    
+    padding: 0px ;
+    
+    font-size: 3em;
+    font-weight: 500;
+    
+}
+
+
+  
+.container{
+  max-width: 100%;
+}
+aside{
+  width: 40%;
+  
+  
+  
+}
+.recetas{
+  width: 60%;
+  
+ 
+  
+}
+
+.titulo-aside{
+  
+  height: 500px;
+}
+.titulo-aside h2{
+  
+  margin-top: 400px;
+
+}
+  
+ 
+  
+  
+  
+}
+
+/* 
+ Adaptabilidad para Iphone 12 pro en modo vertical
+*/
+@media (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  
+  
+  .container{
+    max-width: 100%;
+  }
+  aside{
+    width: 100%;
+    
+    
+  }
+  .recetas{
+    width: 100%;
+    
+   
+    
+  }
+.titulo-aside{
+  background: url("images/Thermomix3.jpg");
+  background-size: contain;
+  height: 140px;
+}
+
+.titulo-aside h2{
+  
+  margin-top: 70px;
+  font-size: 13px;
+
+}
+.boton1{
+  
+  padding: 5px 2px;
+  
+  font-size: 10px;
+  border: 1px solid blanchedalmond;
+  
+  
+  
+}
+  
+.inspiracion{
+  align-items: center;
+  float: none;
+}
+
+.container ul.menu {
+  width: 100%;
+  
+
+}
+.menu-item-buscar{
+  margin-top: 480px;
+ 
+
+}
+
+}
+
+
+/* 
+  Adaptabilidad para Ipad en modo horizontal
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .container ul.menu {
+    width: 45%;
+
+  }  
+
+  .menu-item-buscar{
+    margin-top: 480px;
+   
+
+}
+.container{
+  max-width: 100%;
+}
+aside{
+  width: 40%;
+  
+  
+  
+}
+.recetas{
+  width: 60%;
+  
+ 
+  
+}
+
+.titulo-aside{
+  
+  height: 500px;
+}
+.titulo-aside h2{
+  
+  margin-top: 400px;
+
+}
+  
+ 
+}
+
+/* 
+  Adaptabilidad para Ipad en modo vertical
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .container{
+    max-width: 100%;
+  }
+  aside{
+    width: 100%;
+    
+    
+  }
+  .recetas{
+    width: 100%;
+    
+   
+    
+  }
+.titulo-aside{
+  background: url("images/Thermomix3.jpg");
+  background-size: contain;
+  height: 300px;
+}
+
+.titulo-aside h2{
+  
+  margin-top: 230px;
+
+}
+.inspiracion{
+  align-items: center;
+  float: none;
+}
+
+.container ul.menu {
+  width: 50%;
+ 
+
+}
+
+}
+
+
+/* 
+ Adaptabilidad para pantallas grandes
+*/
+
+@media (min-width: 1281px) {
+  
+ 
+  
+}
+
+
+
+
+

@@ -1,12 +1,26 @@
-*{
+
+
+
+
+*
+{
+    /* border-box le dice al navegador tomar en cuenta para cualquier valor que se especifique de borde
+     o de relleno para el ancho o alto de un elemento. Es decir, si se define un elemento con un ancho
+      de 100 pixeles. Esos 100 pixeles incluíran cualquier borde o relleno que se añadan, y la caja
+       de contenido se encogerá para absorber ese ancho extra. Esto típicamente hace mucho más fácil
+        dimensionar elementos. */
     box-sizing: border-box;
 }
 
 html {
     font-weight: 400;
+    /* La propiedad overflow permite regular la visiblidad de los contenidos que sobresalen de una caja html. */
     overflow-x: hidden;
 }
 html, div, footer, header, ul {
+    /*
+Un elemento block siempre tiene algo de espacio por encima y debajo, que lo separa de los demás elementos, 
+y no acepta ningún otro elemento a su lado - si no está indicado de otra manera ( float ).*/
     display: block;
 }
 h1, h2, h3 {
@@ -23,29 +37,52 @@ body {
 }
 header {
     width: 100%;
+    /*La posicion sticky obliga a que el header siempre está presente en la pagina web aunque 
+    naveguemos hacia abajo en ella*/
     position: sticky;
+    
     position: -webkit-sticky;
     top: 0;
+    /* La propiedad CSS z-index indica el orden de un elemento posicionado y sus descendientes. 
+    Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos
+     con menor valor. */
     z-index: 1000;
     background-color: #f3f3ee;
-    
+    margin-bottom: 20px;
 }
+
+
+
+
+
+
+
+
 button, input {
     overflow: visible;
     margin: 0;
     font-family: inherit;
     font-size: inherit;
+    /* 'inherit' significa que, para un elemento determinado, la propiedad toma el mismo valor computado 
+    que la propiedad del padre del elemento */
     line-height: inherit;
 }
 .container {
     max-width: 70em;
+    margin: 0 auto;
 }
 .container::after {
+    /* Both es un keyword que indica que el elemento es movido hacia abajo para limpiar tanto elementos 
+    flotantes de la izquierda como de la derecha. */
     clear: both;
+    /* La propiedad display: table-cell hace que cualquier elemento se muestre como si fuera una celda
+     de una tabla.  */
     display: table;
     content: "";
 }
-/*ESTILOS PARA EL NAV */
+
+/*----------------------------------------ESTILOS PARA EL NAV --------------------------------------*/
+
 nav {
     width: 100%;
     margin: 0;
@@ -53,11 +90,18 @@ nav {
     display: block;
 }
 .logo {
+    /* Crea cajas que son de bloque y en línea de forma simultánea. Una caja de tipo inline-block se comporta 
+    como si fuera de bloque, pero respecto a los elementos que la rodean es una caja en línea */
+
     display: inline-block;
-    margin: 10px 0 10px 0;
+    
+    margin: 20px 0 10px 0;
 }
+
 /*Estilos para el boton que aparece en dispositivos moviles*/
+
 .menumovil{
+    /* Muestra el puntero al posicionarnos encima */
     cursor: pointer;
     
     z-index: 2;
@@ -82,19 +126,33 @@ span.logo-sub {
     font-style: italic;
 }
 
+
+
 ul.menu {
     border-top: 2px solid #d8dac9;
     clear: both;
     width: 100%;
     max-width: 100%;
     position: relative;
+    margin: 20px 0 0 0;
+    padding: 0;
+    text-align: left;
 }
 ul {
+    /* La propiedad list-style  se utiliza habitualmente cuando no se quiere mostrar ningún 
+    marcador en los elementos de una lista: */
     list-style-type: none;
     display: block;
-    font-size: 1em;
-    line-height: 140%;
+    font-size: 1.05em;
+    line-height: 150%;
     
+}
+
+
+
+p {
+    font-size: 1.1em;
+    line-height: 150%;
 }
 
 li {
@@ -112,8 +170,9 @@ a.menu-item-link:hover {
     color: #1e6f5c;
 }
 .menu-item {
-    line-height: 90%;
+    
     display: inline-block;
+    line-height: 140%;
 }
 a.menu-item-link {
     display: inline-block;
@@ -125,13 +184,42 @@ a.menu-item-link {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    padding: 9px 20px 13px 20px;
+    text-align: left;
+    width: auto;
 }
+
+
+a.menu-item-link.Inicio, a.menu-item-link.Recetas, a.menu-item-link.Nutricion, a.menu-item-link.Descubre, a.menu-item-link.Nosotros {
+    width: auto;
+}
+a.menu-item-link.Recetas{
+    border-width: 0px 2px 0px 0px;
+    display: inline-block;
+}
+
+
+
 /*barra de búsqueda*/
+
+
 form.menu-item-buscar {
     top: 0.3em;
     /*lo pongo en posición absoluta para llevarlo a la derecha*/
     position: absolute;
     right: 0;
+}
+/*barra de búsqueda*/
+.search button {
+    color: #fff;
+    background-color: #289672;
+    width: auto;
+    height: 2em;
+    width: 2em;
+    float: right;
+    border: none;
 }
 
 label {
@@ -143,12 +231,26 @@ label {
     height: 2em;
 }
 
-/*AQUI ACABAN LOS ESTILOS DEL NAV*/
+/*--------------------------------------AQUI ACABAN LOS ESTILOS DEL NAV--------------------------------------*/
 
+
+/*-------------------------------------lista de recetas en portada------------------------------------------*/
 .recetas {
+    height: auto;
+    border-right: 1px solid #D8DAC9;
+    float: left;
+    margin: 0;
+    width: 76%;
     padding-bottom: 2.5em;
     position: relative;
 }
+.image-section {
+    float: left;
+    width: 15em;
+    height: 10em;
+    padding-bottom: 1em;
+}
+
 
 h2.titulo-section {
     text-align: center;
@@ -172,14 +274,23 @@ h2.titulo-section {
     width: 100%;
 }
 
-/*PARTE ASIDE*/
+/*------------------------------------------------PARTE ASIDE----------------------------------------------*/
+
+aside {
+    padding: 0 20px 0 20px;
+    /* Se situa en el aside alineado a la izquierda */
+    float: left;
+    width: 24%;
+}
+
 
 .titulo-aside{
-    width: 300px;
-    height: 400px;
+   
     text-align: center;
     align-items: center;
-    background: url('images/thermomix2.jpg'); /*Colocamos una imagen de fondo*/
+     background: url('images/thermomix2.jpg')  ; /*Colocamos una imagen de fondo */
+     background-size: auto;
+    
     margin-bottom: 20px;
     
 }
@@ -191,11 +302,12 @@ h2.titulo-section {
     background: blanchedalmond;
     color: brown;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 300px;
+    margin-top: 275px;
+    margin-bottom: 0px;
 
 }
 .boton1{
-    /*Que se muestre como un boton*/
+    /*Que se muestre el puntero al situarnos sobre el*/
     cursor: pointer;
     display: inline-block;
     border: 1;
@@ -214,6 +326,10 @@ h2.titulo-section {
     /*Opacidad al colocar el puntero encima*/
     opacity: 0.4;
 }
+
+/*------------------------------------------AQUI TERMINA EL ASIDE-------------------------------------------*/
+
+
 .list-i {
     background: rgba(255,255,255,0.6);
     border: 1px solid #D8DAC9;
@@ -233,14 +349,74 @@ div.desc {
   text-align: center;
 }
 
-/*ESTILOS PARA LOS TIPS DE NUTRICIÓN*/
+/*---------------------------------------------banner publicidad central----------------------------------*/
+.container-banner {
+    background-color: #29bb89;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+}
+.container-banner a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #D8DAC9;
+    font-style: italic;
+    
+
+}
+.tittle-banner {
+    text-align: center;
+}
+.subtittle-banner {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*-----------------------------------------hasta aqui el banner-------------------------------------------*/
+
+/*-------------------------------------Segunda fila de recetas---------------------------------------------*/
+section h2 {
+    font-family: Georgia;
+    color: #1e282f;
+    text-transform: none;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    
+   
+}
+.inspiracion {
+     border-bottom: 1px solid #d8dac9;
+}
+span.subtittle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #a3865b;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 5px;
+}
+
+
+
+/*----------------------------------------ESTILOS PARA LOS TIPS DE NUTRICIÓN------------------------------*/
 .tips-container {
     box-sizing: border-box;
 
 }
+
 .tips {
+    /* El valor relative en el atributo position indica que la capa sí forma parte del flujo normal 
+    de elementos de la página, por lo que su posición dependerá del lugar donde esté en el código y
+     el flujo HTML. */
     position: relative;
     height: 30em;
+    width: 30%;
+    float: left;
 }
 .link-tip-izq {
     position: absolute;
@@ -277,7 +453,39 @@ span.divisor {
     border-bottom: 2px dotted #fff;
 }
 
-/*ESTILOS PARA EL FOOTER*/
+/* --------------------------------------------PARTE REDES SOCIALES----------------------------------------*/
+
+.social{
+    /*Dejamos un margen de 50px arriba y abajo con esta seccion*/
+    margin: 50px;
+}
+.social p{
+    /*Cambiamos el estilo del p de esta seccion*/
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.links{
+    /*Hacemos una disposicion flex del contenido de contenedor div y alineamos los items en el centro*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links a{
+    /*Las anclas que contienen los fab, le dejamos un margen de cero pixeles arriba y abajo y 30px a los lados*/
+    margin: 0 30px;
+}
+.links i{
+    /*Damos formato a los fab*/
+    color:grey;
+    font-size: 2rem;
+}
+/*Fin parte redes sociales*/
+
+
+/*---------------------------------------------ESTILOS PARA EL FOOTER--------------------------------------*/
 
 footer {
     border-top: 1px solid #d8dac9;
@@ -345,258 +553,14 @@ a {
     color: #7EA684;
     padding: 0 15px;
 }
-
-/*ACABA EL ESTILO DE FOOTER*/
-
-
-
-
-/*Cuando se reduce el ancho de pantalla aproximadamente a 1156px encontramos un problema con la 
-barra de navegacion, ya que esta, empieza a pisarse. Por lo tanto, lo que vamos a hacer es que cuando esta
-resolucion se alcance, la barra de menu cambia de disposicion a display block position absolute
-colocandose en vertical, y la esconderemos (transform:translateX(suficiente distancia en pixeles
-para esconderla)  para que solamente se vea cuando pulsemos un boton que  se va a introducir en el lado 
-izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos ese boton, el menu aparecera*/
-
-@media (max-width: 1156px) {
-    .menumovil {
-      display: block;
-    }
-    .menumovil:hover {
-        opacity: 0.5;
-      }
-      .container ul.menu {
-        display: block;
-        
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: #09b67c;
-       
-        width: 40%;
-        height: 100%;
-       
-        opacity: 0.9;
-        padding: 60px;
-        margin-top: 200px;
-        padding-bottom: 495px;
-        /*Con transform translateX movemos el menu entero en el eje de coordenadas X para ocultarlo*/
-        transform: translateX(-700px);
-        /*Con transition transform le damos un poco de suavidad a la hora de sacar y meter el menu con el boton*/
-        transition: transform 0.5s ease-in-out;
-        border-top: 0px;
-        border-width: 0px;
-      }
-      
-      .container ul.menu li {
-        display: block;
-        
-        border-bottom: #ccc solid 1px;
-        font-size: 18px;
-        
-      }
-      .menu-item a{
-          margin-bottom: 20px;
-          
-      }
-      .menu-item-buscar{
-          margin-top: 450px;
-         
-    
-      }
-    
-      /*Con la clase show llamamos al JS para que interactue con la barra menu y le decimos que vuelva 
-      a mover este menu a -20px */
-      .container ul.menu.show {
-        transform: translateX(-20px);
-      }
-    }
-
-
-/* MEDIA QUERIES a 78em o 1248px, 45em o 720px ----30em o 480px*/
-
-@media screen and (min-width: 78em){
-.container {
-    margin: 0 auto;
-}
-}
-
-
-@media screen and (min-width: 45em){
-
-/*MENÚ*/
-ul.menu {
-    margin: 20px 0 0 0;
-}
-.menu-item {
-    line-height: 140%;
-}
-a.menu-item-link {
-    font-size: 0.9em;
-    letter-spacing: 1px;
-    padding: 9px 20px 13px 20px;
-    text-align: left;
-    width: auto;
-    border-width:0px, 2px, 0px, 0px;
-    
-}
-a.menu-item-link.Inicio, a.menu-item-link.Recetas, a.menu-item-link.Nutricion, a.menu-item-link.Descubre, a.menu-item-link.Nosotros {
-    width: auto;
-}
-a.menu-item-link.Recetas{
-    border-width: 0px 2px 0px 0px;
-    display: inline-block;
-}
-/*barra de búsqueda*/
-.search button {
-    color: #fff;
-    background-color: #289672;
-    width: auto;
-    height: 2em;
-    width: 2em;
-    float: right;
-    border: none;
-}
-/*lista de recetas en portada*/
-.recetas {
-    height: auto;
-    border-right: 1px solid #D8DAC9;
-    float: left;
-    margin: 0;
-    width: 76%;
-}
-.image-section {
-    float: left;
-    width: 15em;
-    height: 10em;
-    padding-bottom: 1em;
-}
-
-/*banner publicidad central*/
-.container-banner {
-    background-color: #29bb89;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-
-}
-.container-banner a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #D8DAC9;
-    font-style: italic;
-    
-
-}
-.tittle-banner {
-    text-align: center;
-}
-.subtittle-banner {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-/*hasta aqui el banner*/
-
-h2 {
-    margin: 52px auto 0;
-
-}
-section h2 {
-    font-family: Georgia;
-    color: #1e282f;
-    text-transform: none;
-    text-align: center;
-    font-weight: 400;
-    font-size: 1.8em;
-    letter-spacing: 1px;
-    text-align: center;
-   
-}
-.inspiracion {
-     border-bottom: 1px solid #d8dac9;
-}
-span.subtittle {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: #a3865b;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
-    letter-spacing: 2px;
-    display: block;
-    margin-top: 5px;
-}
-/*TIPS*/
-.tips {
-    width: 30%;
-    float: left;
-}
-/*ASIDE*/
-aside {
-    padding: 0 20px 0 20px;
-    float: left;
-    width: 18%;
-}
-
-/* PARTE REDES SOCIALES*/
-
-.social{
-    /*Dejamos un margen de 50px arriba y abajo con esta seccion*/
-    margin: 50px;
-}
-.social p{
-    /*Cambiamos el estilo del p de esta seccion*/
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.links{
-    /*Hacemos una disposicion flex del contenido de contenedor div y alineamos los items en el centro*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.links a{
-    /*Las anclas que contienen los fab, le dejamos un margen de cero pixeles arriba y abajo y 30px a los lados*/
-    margin: 0 30px;
-}
-.links i{
-    /*Damos formato a los fab*/
-    color:grey;
-    font-size: 2rem;
-}
-/*Fin parte redes sociales*/
-
-
 .footer-box {
     float: left;
     margin-bottom: 0;
     
 }
 
+/*-------------------------------------------ACABA EL ESTILO DE FOOTER------------------------------------*/
 
 
-@media screen and (min-width: 30em){
-header {
-    margin-bottom: 20px;
-}
-.logo {
-    margin: 20px 0 10px 0;
-}
-ul.menu {
-    padding: 0;
-    text-align: left;
-}
-ul {
-    font-size: 1.05em;
-    line-height: 150%;
-}
-p {
-    font-size: 1.1em;
-    line-height: 150%;
-}
 
-}
-}
+
