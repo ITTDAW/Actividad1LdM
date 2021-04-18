@@ -1,14 +1,36 @@
+/*MOBILE FIRST es una fórmula para priorizar la visualización en móviles; para cumplirlo se utiliza el min-width y se va adaptando para pantallas más grandes*/
+@media (min-width: 992px) {
+.logo a {
+    text-decoration: none;
+    color: #1e6f5c;
+    height: 100px;
+    font-size: 2.5em;
+    
+}
+span.logo-sub {
+    font-size: 1em;
+    
+}
+.menu {
+    float: right;
+    height: 78px;
+    width: 780px;
+    position: static;
+    text-align: center;
+}
+  
+}
 
 
 
-/*Cuando se reduce el ancho de pantalla aproximadamente a 1156px encontramos un problema con la 
+/*Cuando se reduce el ancho de pantalla aproximadamente a 1048px encontramos un problema con la 
 barra de navegacion, ya que esta, empieza a pisarse. Por lo tanto, lo que vamos a hacer es que cuando esta
 resolucion se alcance, la barra de menu cambia de disposicion a display block position absolute
 colocandose en vertical, y la esconderemos (transform:translateX(suficiente distancia en pixeles
 para esconderla)  para que solamente se vea cuando pulsemos un boton que  se va a introducir en el lado 
 izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos ese boton, el menu aparecera*/
 
-@media (max-width: 1156px) {
+@media (max-width: 1048px) {
     .container{
         margin: 0 auto;
     }
@@ -18,51 +40,47 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
     .menumovil:hover {
         opacity: 0.5;
       }
-      .container ul.menu {
-        display: block;
-        
-        position: absolute;
+/* Decimos que este menu va a tener una ocupacion en la pantalla en principio de estos valores, mas tarde para otros dispositivos, los variaremos. */
+    ul.menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        align-items: center;
+        margin-top: 0;
         top: 0;
         left: 0;
-        background: #09b67c;
-       /* Decimos que este menu va a tener una ocupacion en la pantalla en principio de estos valores,
-       mas tarde para otros dispositivos, los variaremos. */
-        width: 40%;
-        height: 100%;
-       
-        opacity: 0.9;
-        padding: 60px;
-        margin-top: 200px;
-        padding-bottom: 495px;
+        background: #1b1b1b;
+        justify-content: space-evenly;
+        width: 50%;
+        height: 100vh;
+        opacity: 0.7;
         /*Con transform translateX movemos el menu entero en el eje de coordenadas X para ocultarlo*/
-        transform: translateX(-700px);
+        transform: translateX(-100%);
         /*Con transition transform le damos un poco de suavidad a la hora de sacar y meter el menu con el boton*/
         transition: transform 0.5s ease-in-out;
-        border-top: 0px;
-        border-width: 0px;
       }
       
       .container ul.menu li {
         display: block;
-        
-        border-bottom: #ccc solid 1px;
-        font-size: 18px;
-        
+
       }
+
       .menu-item a{
-          margin-bottom: 20px;
+        font-size: 1.5em;
+        color: #f3f3ee;
+        height: 50px;
+        display: block;
+        line-height: 50px;
+        text-transform: uppercase;
+        padding-left: 15px;
           
       }
-      .menu-item-buscar{
-          margin-top: 450px;
-         
-    
-      }
+     
     
       /*Con la clase show llamamos al JS para que interactue con la barra menu y le decimos que vuelva 
       a mover este menu a -20px */
-      .container ul.menu.show {
-        transform: translateX(-20px);
+      ul.menu.show {
+        transform: translateX(0%);
       }
     }
     
@@ -79,44 +97,12 @@ en el navegador de Chrome o algun otro programa como va variando la composicion 
 cambiar la resolucion e ir adaptando estos cambios para realizar un posicionamiento de nuestros items correcto*/
 
 @media (min-width: 390px) and (max-width: 844px) and (orientation: landscape) {
-  .container ul.menu {
-    width: 45%;
-    padding-top: 5px;
-    margin-top: 130px;
-
-  }  
-
-  .container ul.menu li {
-    display: block;
-    
-    border-bottom: #ccc solid 1px;
-    font-size: 10px;
-    
+  .menu {
+    max-width: 70%;
   }
-  .menu-item a{
-      margin-bottom:0px;
-      padding:10px;
 
-      
-  }
-  
-  .logo{
-    margin-top: 0px;
-    
-  }
-  .logo-item-link {
-    
-    padding: 0px ;
-    
-    font-size: 3em;
-    font-weight: 500;
-    
-}
-
-
-  
 .container{
-  max-width: 100%;
+  max-width: 90%;
 }
 aside{
   width: 40%;
@@ -140,21 +126,19 @@ aside{
   margin-top: 400px;
 
 }
-  
- 
-  
-  
-  
+
 }
 
 /* 
  Adaptabilidad para Iphone 12 pro en modo vertical
 */
 @media (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
-  
-  
+
   .container{
-    max-width: 100%;
+    max-width: 90%;
+  }
+  .menu {
+    max-width: 70%;
   }
   aside{
     width: 100%;
@@ -163,9 +147,7 @@ aside{
   }
   .recetas{
     width: 100%;
-    
-   
-    
+  
   }
 .titulo-aside{
   background: url("images/Thermomix3.jpg");
@@ -182,12 +164,8 @@ aside{
 .boton1{
   
   padding: 5px 2px;
-  
   font-size: 10px;
   border: 1px solid blanchedalmond;
-  
-  
-  
 }
   
 .inspiracion{
@@ -197,15 +175,7 @@ aside{
 
 .container ul.menu {
   width: 100%;
-  
-
 }
-.menu-item-buscar{
-  margin-top: 480px;
- 
-
-}
-
 }
 
 
@@ -215,18 +185,12 @@ aside{
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
-  .container ul.menu {
-    width: 45%;
+  .menu {
+    width: 70%;
 
   }  
-
-  .menu-item-buscar{
-    margin-top: 480px;
-   
-
-}
 .container{
-  max-width: 100%;
+  max-width: 90%;
 }
 aside{
   width: 40%;
@@ -260,18 +224,14 @@ aside{
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .container{
-    max-width: 100%;
+    max-width: 90%;
   }
   aside{
     width: 100%;
-    
-    
   }
   .recetas{
     width: 100%;
-    
-   
-    
+     
   }
 .titulo-aside{
   background: url("images/Thermomix3.jpg");
@@ -289,14 +249,13 @@ aside{
   float: none;
 }
 
-.container ul.menu {
-  width: 50%;
+.menu {
+  width: 70%;
  
 
 }
 
 }
-
 
 /* 
  Adaptabilidad para pantallas grandes

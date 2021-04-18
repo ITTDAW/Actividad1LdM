@@ -1,23 +1,19 @@
-
-
-
-
-*
-{
     /* border-box le dice al navegador tomar en cuenta para cualquier valor que se especifique de borde
      o de relleno para el ancho o alto de un elemento. Es decir, si se define un elemento con un ancho
       de 100 pixeles. Esos 100 pixeles incluíran cualquier borde o relleno que se añadan, y la caja
        de contenido se encogerá para absorber ese ancho extra. Esto típicamente hace mucho más fácil
         dimensionar elementos. */
-    box-sizing: border-box;
-}
+
+
+
+* {box-sizing: border-box;}
 
 html {
     font-weight: 400;
     /* La propiedad overflow permite regular la visiblidad de los contenidos que sobresalen de una caja html. */
     overflow-x: hidden;
 }
-html, div, footer, header, ul {
+html, footer, ul {
     /*
 Un elemento block siempre tiene algo de espacio por encima y debajo, que lo separa de los demás elementos, 
 y no acepta ningún otro elemento a su lado - si no está indicado de otra manera ( float ).*/
@@ -35,12 +31,14 @@ body {
     font-size: 1.1em;
     
 }
+a, a:focus, a:hover {
+    text-decoration: none;
+}
 header {
     width: 100%;
     /*La posicion sticky obliga a que el header siempre está presente en la pagina web aunque 
     naveguemos hacia abajo en ella*/
     position: sticky;
-    
     position: -webkit-sticky;
     top: 0;
     /* La propiedad CSS z-index indica el orden de un elemento posicionado y sus descendientes. 
@@ -49,16 +47,29 @@ header {
     z-index: 1000;
     background-color: #f3f3ee;
     margin-bottom: 20px;
+    
+}
+p {
+    font-size: 1.1em;
+    line-height: 150%;
 }
 
+li {
+    text-align:center;
+}
+/*----------------------------------------ESTILOS PARA EL NAV --------------------------------------*/
 
-
-
-
-
-
-
-button, input {
+nav {
+    height: 120px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #d8dac9;
+    
+}
+button {
     overflow: visible;
     margin: 0;
     font-family: inherit;
@@ -67,8 +78,32 @@ button, input {
     que la propiedad del padre del elemento */
     line-height: inherit;
 }
+
+/*los siguientes estilos son para la tipografia genérica del logo y sub-logo*/
+.logo {
+    font-family: Georgia,serif;
+    line-height: 20px;
+    font-weight: 500;
+    float: left;
+    margin: auto 0;
+}
+.logo a {
+    text-decoration: none;
+    color: #1e6f5c;
+    height: 80px;
+    font-size: 1.9em;
+    
+}
+span.logo-sub {
+    color: #289672;
+    font-size: 0.8em;
+    font-style: italic;
+    padding-top: 0.5em;
+    display: block;
+}
+/*Definimos el contenedor para toda la página al 90%*/
 .container {
-    max-width: 70em;
+    max-width: 90%;
     margin: 0 auto;
 }
 .container::after {
@@ -81,63 +116,16 @@ button, input {
     content: "";
 }
 
-/*----------------------------------------ESTILOS PARA EL NAV --------------------------------------*/
-
-nav {
-    width: 100%;
-    margin: 0;
-    padding: 15px 0 10px 0;
-    display: block;
-}
-.logo {
-    /* Crea cajas que son de bloque y en línea de forma simultánea. Una caja de tipo inline-block se comporta 
-    como si fuera de bloque, pero respecto a los elementos que la rodean es una caja en línea */
-
-    display: inline-block;
-    
-    margin: 20px 0 10px 0;
-}
 
 /*Estilos para el boton que aparece en dispositivos moviles*/
 
 .menumovil{
     /* Muestra el puntero al posicionarnos encima */
-    cursor: pointer;
-    
-    z-index: 2;
     display: none; 
+    z-index: 2;
 /* Con esto conseguimos hacer invisible el boton, hasta que la media querie actue */
 }
-.logo-item-link {
-    font-size: 2.5em;
-    margin: 0;
-    padding: 10px 0;
-    color: #1e6f5c;
-    font-family: 'Tangerine', cursive;
-    text-decoration: none;
-    font-size: 5em;
-    font-weight: 500;
-    
-}
-span.logo-sub {
-    color: #289672;
-    display: block;
-    font-size: 1em;
-    font-style: italic;
-}
 
-
-
-ul.menu {
-    border-top: 2px solid #d8dac9;
-    clear: both;
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-    margin: 20px 0 0 0;
-    padding: 0;
-    text-align: left;
-}
 ul {
     /* La propiedad list-style  se utiliza habitualmente cuando no se quiere mostrar ningún 
     marcador en los elementos de una lista: */
@@ -150,24 +138,16 @@ ul {
 
 
 
-p {
-    font-size: 1.1em;
-    line-height: 150%;
-}
 
-li {
-    text-align:center;
-}
 
 .is-active a.menu-item-link {
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 100%);
-    background-repeat: no-repeat;
-    color: #1e6f5c;
+    
+    color: #29bb89;
 }
 a.menu-item-link:hover {
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 100%);
-    background-repeat: no-repeat;
-    color: #1e6f5c;
+  
+    color: #29bb89;
+    
 }
 .menu-item {
     
@@ -175,11 +155,10 @@ a.menu-item-link:hover {
     line-height: 140%;
 }
 a.menu-item-link {
+     /* Crea cajas que son de bloque y en línea de forma simultánea. Una caja de tipo inline-block se comporta 
+    como si fuera de bloque, pero respecto a los elementos que la rodean es una caja en línea */
     display: inline-block;
-    border-width: 0px 2px 0px 0px;
-    border-style: solid;
-    border-image: linear-gradient(to bottom, #d8dac9, rgba(255,255,255,0)) 1 100%;
-    color: #fd193f;
+    color: #1b1b1b;
     font-family: sans-serif;
     font-weight: bold;
     text-decoration: none;
@@ -196,42 +175,10 @@ a.menu-item-link.Inicio, a.menu-item-link.Recetas, a.menu-item-link.Nutricion, a
     width: auto;
 }
 a.menu-item-link.Recetas{
-    border-width: 0px 2px 0px 0px;
+   
     display: inline-block;
 }
 
-
-
-/*barra de búsqueda*/
-
-
-form.menu-item-buscar {
-    top: 0.3em;
-    /*lo pongo en posición absoluta para llevarlo a la derecha*/
-    position: absolute;
-    right: 0;
-}
-/*barra de búsqueda*/
-.search button {
-    color: #fff;
-    background-color: #289672;
-    width: auto;
-    height: 2em;
-    width: 2em;
-    float: right;
-    border: none;
-}
-
-label {
-    cursor: pointer;
-}
-.search-field {
-    border: 2px solid #289672;
-    width: 15em;
-    height: 2em;
-}
-
-/*--------------------------------------AQUI ACABAN LOS ESTILOS DEL NAV--------------------------------------*/
 
 
 /*-------------------------------------lista de recetas en portada------------------------------------------*/
