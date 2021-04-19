@@ -200,12 +200,16 @@ a.menu-item-link.Recetas{
 
 
 h2.titulo-section {
+    padding-top: 1em;
     text-align: center;
     font-weight: normal;
     font-family: Georgia, serif;
     font-weight: 400;
     font-size: 1.8em;
     letter-spacing: 1px;
+}
+span.subtittle {
+    padding-bottom: 1em;
 }
 
 .image-section {
@@ -281,20 +285,7 @@ aside {
     background: rgba(255,255,255,0.6);
     border: 1px solid #D8DAC9;
 }
-div.gallery {
-  margin: 1.5em;
-  display: inline-block;
-  max-width: 330px;
-}
 
-.gallery img {
-    width: 100%;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
 
 /*---------------------------------------------banner publicidad central----------------------------------*/
 .container-banner {
@@ -322,7 +313,7 @@ div.desc {
 /*-----------------------------------------hasta aqui el banner-------------------------------------------*/
 
 /*-------------------------------------Segunda fila de recetas---------------------------------------------*/
-section h2 {
+.h2-galeria {
     font-family: Georgia;
     color: #1e282f;
     text-transform: none;
@@ -333,8 +324,11 @@ section h2 {
     
    
 }
-.inspiracion {
+.contenedor-galeria {
      border-bottom: 1px solid #d8dac9;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
 }
 span.subtittle {
     font-family: Arial, Helvetica, sans-serif;
@@ -346,6 +340,19 @@ span.subtittle {
     letter-spacing: 2px;
     display: block;
     margin-top: 5px;
+}
+div.gallery {
+  margin: 1.5em;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 330px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
 }
 
 
@@ -400,6 +407,25 @@ span.divisor {
     border-bottom: 2px dotted #fff;
 }
 
+
+/*---------------------------------------------ESTILOS PARA EL FOOTER--------------------------------------*/
+
+footer {
+    border-top: 1px solid #d8dac9;
+    width: 100%;
+}
+.footer-box-right {
+    float: right;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 1em;
+    width: 50%; 
+    
+}
+.footer-box-left {
+    float: left;
+    
+}
 /* --------------------------------------------PARTE REDES SOCIALES----------------------------------------*/
 
 .social{
@@ -408,11 +434,13 @@ span.divisor {
 }
 .social p{
     /*Cambiamos el estilo del p de esta seccion*/
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:sans-serif;
     font-style: italic;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
+    color: #289672;
+    text-transform: uppercase;
 }
 .links{
     /*Hacemos una disposicion flex del contenido de contenedor div y alineamos los items en el centro*/
@@ -432,19 +460,6 @@ span.divisor {
 /*Fin parte redes sociales*/
 
 
-/*---------------------------------------------ESTILOS PARA EL FOOTER--------------------------------------*/
-
-footer {
-    border-top: 1px solid #d8dac9;
-    width: 100%;
-}
-.footer-box-right {
-    float: right;
-    position: relative;
-    margin-bottom: 20px;
-    padding: 1em;
-    width: 50%; 
-}
 h3.heading-footer {
     text-transform: uppercase;
     color: #289672;

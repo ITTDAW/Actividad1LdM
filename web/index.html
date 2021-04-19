@@ -60,6 +60,7 @@
             <ul class="recetas">
                 <h2 class="titulo-section">Recetas del mes</h2>
                 <span class="subtittle"><p>Deliciosas y fáciles</p></span>
+                <div class="contenedor-recetas">
                 <li class="items-recetas">
                     <a target="_blank" href="css/images/rollito de esparragos y bacon.jpg">
                         <img src="css/images/rollito de esparragos y bacon.jpg" alt="receta" class="image-section">
@@ -80,6 +81,7 @@
                     </a>  
                     <div class="tittle-recetas">Boquerones a la bilbaína</div>          
                 </li>
+                </div>
             </ul>
     
       <!-- A continuacion implementamos el aside que en este caso va a contener un banner
@@ -106,9 +108,9 @@
 
     <!--De nuevo un contenedor div con max-width 70em, dentro de él metemos el section que será una zona con una galeria de recetas rápidas, esta vez cada receta irá en un div gallery con un enlace, y se incluirá una corta descripción-->
     <div class="container">
-    <section class="inspiracion">
-        <h2>Consigue inspiración</h2>
+        <h2 class="h2-galeria">Consigue inspiración</h2>
         <span class="subtittle"><p>Para llevar y para picar</p></span>
+        <section class="contenedor-galeria">
 
         <div class="gallery">
         <a href="css/images/guacamole mexicano.jpg">
@@ -154,28 +156,7 @@
             </ul>
         </div>
     </div>
-    <!-- A continuación implementamos el codigo perteneciente a las redes sociales con sus iconos fab que previamente hemos cargado en el head para su visualizacion. Esta seccion lleva un párrafo para 
-    describir la intencion que tenemos de que la gente se una a nuestras redes sociales y despues un contenedor div con el que indentificaremos esta parte para modificarla en css. Hemos añadido 5 anclas para mostrar las redes sociales mas conocidas -->
-    <section class="social">
-        <p>Únete a nosotros en las redes</p>
-        <div class="links">
-            <a href="#">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-google"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
-    </section>
+    
     </div>
 
     <!--El footer va en un contenedor div de 70 em y la idea es hacer dos partes, un div que se divida en 2 cajas para suscripciones, artículos antiguos, etc y y footer abajo para el copyright-->
@@ -184,19 +165,37 @@
 
 
         <footer>
-                <div class="footer-box-right">
-                        <h3 class="heading-footer">newsletter</h3>
-                        <div class="newsletter-block">
-                            <P>Suscríbete para recibir recetas y noticias</P>
-                            <div class="newsletter-form">
-                                <input type="text" class="newsletter-email" name="newsletter-email" placeholder="Escribe tu email...">
-                                <button class="newsletter-submit">SUSCRÍBETE</button>
-                                <p class="privacidad">Enviando tu email arriba estás aceptando nuestra <a href="">política de privacidad</a>.</p>
-                            </div>
-                        </div>
-                        
+            <!-- A continuación implementamos el codigo perteneciente a las redes sociales con sus iconos fab que previamente hemos cargado en el head para su visualizacion. Esta seccion lleva un párrafo para 
+            describir la intencion que tenemos de que la gente se una a nuestras redes sociales y despues un contenedor div con el que indentificaremos esta parte para modificarla en css. Hemos añadido 5 anclas para mostrar las redes sociales mas conocidas -->
+            <div class="social footer-box-left">
+                <p>Únete a nosotros en las redes</p>
+                <div class="links">
+                    <a href="#"><i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#"><i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#"><i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#"><i class="fab fa-google"></i>
+                    </a>
+                    <a href="#"><i class="fab fa-youtube"></i>
+                    </a>
                 </div>
-                <p class="footer-copyright">© 2021 bla bla bla<span class="footer-punto">&#8226;</span>Construido por....</p>        
+            </div>
+    
+            <div class="footer-box-right">
+                <h3 class="heading-footer">newsletter</h3>
+                <div class="newsletter-block">
+                    <P>Suscríbete para recibir recetas y noticias</P>
+                    <div class="newsletter-form">
+                        <input type="text" class="newsletter-email" name="newsletter-email" placeholder="Escribe tu email...">
+                        <button class="newsletter-submit">SUSCRÍBETE</button>
+                        <p class="privacidad">Enviando tu email arriba estás aceptando nuestra <a href="">política de privacidad</a>.</p>
+                    </div>
+                </div>
+                            
+            </div>
+            <p class="footer-copyright">© 2021 bla bla bla<span class="footer-punto">&#8226;</span>Construido por....</p>        
         
         </footer>
     </div>
