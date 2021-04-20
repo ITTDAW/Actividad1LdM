@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
     <!-- Con el siguiente codigo añadimos el favicon en la pestaña del titulo de la web -->
-    <link rel="shortcut icon" href="css/images/favicon.png"> 
+    <link rel="shortcut icon" href="css/images/favicon.png">
     <!-- Con el siguiente link, cargamos los iconos fab que utilizaremos mas tarde -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/adaptabilidad.css">
-    
+
 </head>
+
 <body>
     <!--El HEADER lo acotamos al 90% con un div container. En el div incluimos el NAV con un div para el logo, un div para el menu móvil y una lista ul que contiene los items del menú más el item de búsqueda en formato form button-->
 
@@ -27,11 +29,11 @@
                     <a href="http://recetamania">Recetamanía</a>
                     <span class="logo-sub">Recetas sencillas para una vida saludable</span>
                 </div>
-                 <!-- Creamos el boton del menu para adaptabilidad a diferentes resoluciones -->
-                 <div class="menumovil">
+                <!-- Creamos el boton del menu para adaptabilidad a diferentes resoluciones -->
+                <div class="menumovil">
                     <i class="fas fa-bars fa-2x"></i>
                 </div>
-                
+
                 <!--Menú de páginas-->
                 <ul class="menu">
                     <li class="menu-item is-active"><a href="#" class="menu-item-link Inicio">Inicio</a></li>
@@ -40,118 +42,140 @@
                     <!-- En el siguiente item de la lista, es donde tenemos que introducir la posibilidad de 
                     entrar en el formulario para que el usuario contacte con los administradores de 
                     la pagina web -->
-                    <li class="menu-item"><a href="formulariocontacto.html" target="_blank" class="menu-item-link Nosotros">Contacto</a></li>
+                    <li class="menu-item"><a href="formulariocontacto.html" target="_blank"
+                            class="menu-item-link Nosotros">Contacto</a></li>
                     <li class="menu-item search">
                         <form class="menu-item-buscar" action="/action_page.php">
                             <button type="submit"><i class="fa fa-search"></i></button>
-                        </form> 
+                        </form>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-   
+
 
     <!--Con otro div contenedor igual al anterior acotamos al 90% para que la sección respire, contendrá una galeria de recetas del mes y un aside para noticias o publicidad-->
     <div class="container">
         <h2 class="h2-galeria recetas-mes">Recetas del mes</h2>
-        <span class="subtittle recetas-mes"><p>Deliciosas y fáciles</p></span>
-            <section class="contenedor-galeria recetas-mes">
-                <div class="gallery">
+        <span class="subtittle recetas-mes">
+            <p>Deliciosas y fáciles</p>
+        </span>
+        <section class="contenedor-galeria recetas-mes">
+            <div class="gallery">
                 <a href="css/images/rollito de esparragos y bacon.jpg">
-                    <img src="css/images/rollito de esparragos y bacon.jpg" alt="rollito de espárragos verdes y bacon" width="170" height="230">
+                    <img src="css/images/rollito de esparragos y bacon.jpg" alt="rollito de espárragos verdes y bacon"
+                        width="170" height="230">
                 </a>
-                    <div class="desc">Rollits de espárragos verdes y bacon</div>
-                    </div>
+                <div class="desc">Rollits de espárragos verdes y bacon</div>
+            </div>
 
-                <div class="gallery">
+            <div class="gallery">
                 <a href="css/images/ensalada con aceite de sésamo.jpg">
-                    <img src="css/images/ensalada con aceite de sésamo.jpg" alt="Ensalada con aceite de sésamo" width="170" height="230">
+                    <img src="css/images/ensalada con aceite de sésamo.jpg" alt="Ensalada con aceite de sésamo"
+                        width="170" height="230">
                 </a>
-                    <div class="desc">Ensalada con aceite de sésamo</div>
-                    </div>
+                <div class="desc">Ensalada con aceite de sésamo</div>
+            </div>
 
-                <div class="gallery">
-                <a href="css/images/boquerones bilbaina.jpg">
-                    <img src="css/images/boquerones bilbaina.jpg" alt="Boquerones a la bilbaína" width="170" height="230">
+            <div class="gallery">
+                <a href="css/images/garbanzosCatalana.jpg">
+                    <img src="css/images/garbanzosCatalana.jpg" alt="Garbanzos a la Catalana" width="170" height="230">
                 </a>
-                    <div class="desc">Boquerones a la bilbaína</div>
-                    </div>
-            </section>
-            
-    
-      <!-- A continuacion implementamos el aside que en este caso va a contener un banner
+                <div class="desc">Ensalada con aceite de sésamo</div>
+            </div>
+
+            <div class="gallery">
+                <a href="css/images/boquerones bilbaina.jpg">
+                    <img src="css/images/boquerones bilbaina.jpg" alt="Boquerones a la bilbaína" width="170"
+                        height="230">
+                </a>
+                <div class="desc">Boquerones a la bilbaína</div>
+            </div>
+        </section>
+
+
+        <!-- A continuacion implementamos el aside que en este caso va a contener un banner
       de publicidad para ganar un sorteo mediante el registro en la web, por lo tanto
       va a ir relacionado con otro formulario   -->
         <aside>
             <div class="titulo-aside">
                 <p>Sorteo Thermomix</p>
                 <h2>HAZTE CON ELLA</h2>
-                
-                <a href="formularioconcurso.html"  class="boton1" target="_blank" >Crea tu cuenta <i class="fas fa-angle-double-right"></i></a>
+
+                <a href="formularioconcurso.html" class="boton1" target="_blank">Crea tu cuenta <i
+                        class="fas fa-angle-double-right"></i></a>
             </div>
-            
-            
-        </aside>   
+
+
+        </aside>
     </div>
 
     <!--El siguiente espacio es un div para banner que tenga un width del 100%-->
     <div class="banner">
-            <div class="container-banner">
-                <a href=""><h2 class="tittle-banner">Descubre 7 comidas saludable</h2><p class="subtittle-banner">que se cocinan en menos de 20 minutos</p></a>
-            </div>
+        <div class="container-banner">
+            <a href="">
+                <h2 class="tittle-banner">Descubre 7 comidas saludable</h2>
+                <p class="subtittle-banner">que se cocinan en menos de 20 minutos</p>
+            </a>
+        </div>
     </div>
 
     <!--De nuevo un contenedor div con max-width 70em, dentro de él metemos el section que será una zona con una galeria de recetas rápidas, esta vez cada receta irá en un div gallery con un enlace, y se incluirá una corta descripción-->
     <div class="container">
         <h2 class="h2-galeria">Consigue inspiración</h2>
-        <span class="subtittle"><p>Para llevar y para picar</p></span>
-            <section class="contenedor-galeria">
-                <div class="gallery">
+        <span class="subtittle">
+            <p>Para llevar y para picar</p>
+        </span>
+        <section class="contenedor-galeria">
+            <div class="gallery">
                 <a href="css/images/guacamole mexicano.jpg">
                     <img src="css/images/guacamole.jpg" alt="guacamole mexicano" width="170" height="230">
                 </a>
-                    <div class="desc">Guacamole</div>
-                    </div>
+                <div class="desc">Guacamole</div>
+            </div>
 
-                <div class="gallery">
+            <div class="gallery">
                 <a href="css/images/sandwich cubano.jpg">
                     <img src="css/images/sandwich cubano.jpg" alt="sandwich cubano" width="170" height="230">
                 </a>
-                    <div class="desc">Sandwich cubano</div>
-                    </div>
+                <div class="desc">Sandwich cubano</div>
+            </div>
 
-                <div class="gallery">
+            <div class="gallery">
                 <a href="css/images/humus de garbanzos.jpg">
                     <img src="css/images/humus de garbanzos.jpg" alt="Humus de garbanzos" width="170" height="230">
                 </a>
-                    <div class="desc">Humus de garbanzo</div>
-                    </div>
-            </section>
+                <div class="desc">Humus de garbanzo</div>
+            </div>
+        </section>
 
-    <div class="container">
-        
+        <div class="container">
+
             <h2 class="titulo-section">Tips de nutrición</h2>
-            <span class="subtittle"><p>Toma nota</p></span>
-        
+            <span class="subtittle">
+                <p>Toma nota</p>
+            </span>
 
-        <div class="tips-container">
-            <ul class="tips">
-                <li class="link-tip-izq">
-                    <span class="tip-tittle">Recetamania Tips</span>
-                    <span class="divisor"></span>
-                    <p>Los huevos son una estupenda fuente de proteinas y vitamina B12, la mayor parte de su grasa es insaturada y saludable. Sustituir un bistec de carne por dos huevos es una gran idea.</p>
-                </li>
-                <li class="link-tip-center">
-                    <img src="css/images/tortilla de patatas.jpg" alt="tortilla de patatas" class="tip-image">
-                </li>
-                <li class="link-tip-center-down">
-                    <img src="css/images/tostada huevo frito.jpg" class="tip-image" width="250" height="188">
-                </li>
-            </ul>
+
+            <div class="tips-container">
+                <ul class="tips">
+                    <li class="link-tip-izq">
+                        <span class="tip-tittle">Recetamania Tips</span>
+                        <span class="divisor"></span>
+                        <p>Los huevos son una estupenda fuente de proteinas y vitamina B12, la mayor parte de su grasa
+                            es insaturada y saludable. Sustituir un bistec de carne por dos huevos es una gran idea.</p>
+                    </li>
+                    <li class="link-tip-center">
+                        <img src="css/images/tortilla de patatas.jpg" alt="tortilla de patatas" class="tip-image">
+                    </li>
+                    <li class="link-tip-center-down">
+                        <img src="css/images/tostada huevo frito.jpg" class="tip-image" width="250" height="188">
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    
+
     </div>
 
     <!--El footer va en un contenedor div de 70 em y la idea es hacer dos partes, un div que se divida en 2 cajas para suscripciones, artículos antiguos, etc y y footer abajo para el copyright-->
@@ -177,32 +201,36 @@
                     </a>
                 </div>
             </div>
-    
+
             <div class="footer-box-right">
                 <h3 class="heading-footer">newsletter</h3>
                 <div class="newsletter-block">
                     <P>Suscríbete para recibir recetas y noticias</P>
                     <div class="newsletter-form">
-                        <input type="text" class="newsletter-email" name="newsletter-email" placeholder="Escribe tu email...">
+                        <input type="text" class="newsletter-email" name="newsletter-email"
+                            placeholder="Escribe tu email...">
                         <button class="newsletter-submit">SUSCRÍBETE</button>
-                        <p class="privacidad">Enviando tu email arriba estás aceptando nuestra <a href="">política de privacidad</a>.</p>
+                        <p class="privacidad">Enviando tu email arriba estás aceptando nuestra <a href="">política de
+                                privacidad</a>.</p>
                     </div>
                 </div>
-                            
+
             </div>
-            <p class="footer-copyright">© 2021 bla bla bla<span class="footer-punto">&#8226;</span>Construido por....</p>        
-        
+            <p class="footer-copyright">© 2021 bla bla bla<span class="footer-punto">&#8226;</span>Construido por....
+            </p>
+
         </footer>
     </div>
-    
 
-<!-- Cargamos al final del body el JS de la escucha del boton para la adaptacion del menu en dispositivos
+
+    <!-- Cargamos al final del body el JS de la escucha del boton para la adaptacion del menu en dispositivos
     de menos resolucion. La razon de que vaya al final del body es que necesita que el DOM este cargado, 
     sino, la ejecucion nos daria un error.     -->
-    <script src="JS/Adaptacion.js"></script> 
+    <script src="JS/Adaptacion.js"></script>
 
-    
-        
-    
+
+
+
 </body>
+
 </html>
