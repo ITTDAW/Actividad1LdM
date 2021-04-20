@@ -182,56 +182,17 @@ a.menu-item-link.Recetas{
 
 
 /*-------------------------------------lista de recetas en portada------------------------------------------*/
-.recetas {
-    height: auto;
-    border-right: 1px solid #D8DAC9;
+.recetas-mes {
+    width: 70%;
     float: left;
-    margin: 0;
-    width: 76%;
-    padding-bottom: 2.5em;
-    position: relative;
 }
-.image-section {
-    float: left;
-    width: 15em;
-    height: 10em;
-    padding-bottom: 1em;
-}
-
-
-h2.titulo-section {
-    padding-top: 1em;
-    text-align: center;
-    font-weight: normal;
-    font-family: Georgia, serif;
-    font-weight: 400;
-    font-size: 1.8em;
-    letter-spacing: 1px;
-}
-span.subtittle {
-    padding-bottom: 1em;
-}
-
-.image-section {
-    max-width: 12em;
-    max-height: 25em;
-}
-.items-recetas {
-    float: left;
-    padding: 1em 1em 1em 1em;
-}
-
-.items-recetas img {
-    width: 100%;
-}
-
 /*------------------------------------------------PARTE ASIDE----------------------------------------------*/
 
 aside {
-    padding: 0 20px 0 20px;
-    /* Se situa en el aside alineado a la izquierda */
-    float: left;
-    width: 24%;
+    /* Se situa en el aside alineado a la derecha para separarlo al máximo de la sección recetas del mes */
+    float: right;
+    margin-right: 50px;
+    width: 20%;
 }
 
 

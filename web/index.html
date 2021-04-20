@@ -18,7 +18,7 @@
     
 </head>
 <body>
-    <!--El header lo acotamos a 70em con un div container. En el div incluimos el nav con un div para el logo y una lista ul que contiene los items del menú más el item de búsqueda en formato form-->
+    <!--El HEADER lo acotamos al 90% con un div container. En el div incluimos el NAV con un div para el logo, un div para el menu móvil y una lista ul que contiene los items del menú más el item de búsqueda en formato form button-->
 
     <header>
         <div class="container">
@@ -44,7 +44,6 @@
                     <li class="menu-item search">
                         <form class="menu-item-buscar" action="/action_page.php">
                             <button type="submit"><i class="fa fa-search"></i></button>
-                      
                         </form> 
                     </li>
                 </ul>
@@ -53,36 +52,33 @@
     </header>
    
 
-
-    <!--Con otro div contenedor igual al anterior acotamos a 70em el siguiente espacio que contendrá una galeria de recetas en formato lista ul (la idea es incluir un botón de previo y un botón de siguiente con más recetas que queden escondidas) y un aside para noticias o publicidad-->
+    <!--Con otro div contenedor igual al anterior acotamos al 90% para que la sección respire, contendrá una galeria de recetas del mes y un aside para noticias o publicidad-->
     <div class="container">
-        
-            <ul class="recetas">
-                <h2 class="titulo-section">Recetas del mes</h2>
-                <span class="subtittle"><p>Deliciosas y fáciles</p></span>
-                <div class="contenedor-recetas">
-                <li class="items-recetas">
-                    <a target="_blank" href="css/images/rollito de esparragos y bacon.jpg">
-                        <img src="css/images/rollito de esparragos y bacon.jpg" alt="receta" class="image-section">
-                    </a>
-                    <div class="tittle-recetas">Rollitos de espárragos y bacon 
+        <h2 class="h2-galeria recetas-mes">Recetas del mes</h2>
+        <span class="subtittle recetas-mes"><p>Deliciosas y fáciles</p></span>
+            <section class="contenedor-galeria recetas-mes">
+                <div class="gallery">
+                <a href="css/images/rollito de esparragos y bacon.jpg">
+                    <img src="css/images/rollito de esparragos y bacon.jpg" alt="rollito de espárragos verdes y bacon" width="170" height="230">
+                </a>
+                    <div class="desc">Rollits de espárragos verdes y bacon</div>
+                    </div>
 
-                    </div>             
-                </li>
-                <li class="items-recetas">
-                    <a target="_blank" href="css/images/ensalada con aceite de sésamo.jpg">
-                        <img src="css/images/ensalada con aceite de sésamo.jpg" alt="receta" class="image-section">
-                    </a>
-                    <div class="tittle-recetas">Ensalada con aceite de sésamo</div> 
-                </li>
-                <li class="items-recetas">
-                    <a target="_blank" href="css/images/boquerones bilbaina.jpg">
-                        <img src="css/images/boquerones bilbaina.jpg" alt="" class="image-section">  
-                    </a>  
-                    <div class="tittle-recetas">Boquerones a la bilbaína</div>          
-                </li>
-                </div>
-            </ul>
+                <div class="gallery">
+                <a href="css/images/ensalada con aceite de sésamo.jpg">
+                    <img src="css/images/ensalada con aceite de sésamo.jpg" alt="Ensalada con aceite de sésamo" width="170" height="230">
+                </a>
+                    <div class="desc">Ensalada con aceite de sésamo</div>
+                    </div>
+
+                <div class="gallery">
+                <a href="css/images/boquerones bilbaina.jpg">
+                    <img src="css/images/boquerones bilbaina.jpg" alt="Boquerones a la bilbaína" width="170" height="230">
+                </a>
+                    <div class="desc">Boquerones a la bilbaína</div>
+                    </div>
+            </section>
+            
     
       <!-- A continuacion implementamos el aside que en este caso va a contener un banner
       de publicidad para ganar un sorteo mediante el registro en la web, por lo tanto
@@ -110,29 +106,28 @@
     <div class="container">
         <h2 class="h2-galeria">Consigue inspiración</h2>
         <span class="subtittle"><p>Para llevar y para picar</p></span>
-        <section class="contenedor-galeria">
+            <section class="contenedor-galeria">
+                <div class="gallery">
+                <a href="css/images/guacamole mexicano.jpg">
+                    <img src="css/images/guacamole.jpg" alt="guacamole mexicano" width="170" height="230">
+                </a>
+                    <div class="desc">Guacamole</div>
+                    </div>
 
-        <div class="gallery">
-        <a href="css/images/guacamole mexicano.jpg">
-            <img src="css/images/guacamole.jpg" alt="guacamole mexicano" width="170" height="230">
-        </a>
-        <div class="desc">Guacamole</div>
-        </div>
+                <div class="gallery">
+                <a href="css/images/sandwich cubano.jpg">
+                    <img src="css/images/sandwich cubano.jpg" alt="sandwich cubano" width="170" height="230">
+                </a>
+                    <div class="desc">Sandwich cubano</div>
+                    </div>
 
-        <div class="gallery">
-        <a href="css/images/sandwich cubano.jpg">
-            <img src="css/images/sandwich cubano.jpg" alt="sandwich cubano" width="170" height="230">
-        </a>
-        <div class="desc">Sandwich cubano</div>
-        </div>
-
-        <div class="gallery">
-        <a href="css/images/humus de garbanzos.jpg">
-            <img src="css/images/humus de garbanzos.jpg" alt="Humus de garbanzos" width="170" height="230">
-        </a>
-        <div class="desc">Humus de garbanzo</div>
-        </div>
-    </section>
+                <div class="gallery">
+                <a href="css/images/humus de garbanzos.jpg">
+                    <img src="css/images/humus de garbanzos.jpg" alt="Humus de garbanzos" width="170" height="230">
+                </a>
+                    <div class="desc">Humus de garbanzo</div>
+                    </div>
+            </section>
 
     <div class="container">
         
