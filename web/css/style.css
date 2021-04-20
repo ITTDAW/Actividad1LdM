@@ -179,6 +179,73 @@ a.menu-item-link.Recetas{
     display: inline-block;
 }
 
+/* --------------------Aqui vamos a darle formato a nuestro menu desplegable ------------------------------*/
+
+.submenu  {
+    /*Le decimos display none para que no lo muestre hasta que pasemos el mouse por encima del elemento
+    que después definiremos*/
+    display:none;
+    
+    position:absolute;
+    background: #caf7f3;
+    padding: 0px;
+    border: #63f3db solid 1px;
+    
+   }
+   
+   /* items del menu desplegable */
+   
+.submenu  li {
+    /*Le decimos un ancho minimo para que no se descuadre con nombres mas pequeños*/
+    min-width:140px;
+    
+    
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    
+   }
+
+   
+   /* enlaces de los items del menu desplegable */
+   
+.submenu a {
+    /*Decimos un display block para que se situe en vertical*/
+    display: block;
+   
+    padding:5px 5px;
+    border: #63f3db solid 1px;
+    /*Le aplicamos una transicion para que los items del menu se seleccionen mas despacio*/
+    transition: all .8s;
+   }
+   
+   /* items del menu desplegable al pasar el ratón */
+.submenu a:hover {
+  
+    color: #f8faf9;
+    background:#29bb89;
+    
+}
+    /*fondo al pasar el mouse por encima de Nutricion*/
+.menu a.menu-item-link.Nutricion:hover {
+  
+    background: #caf7f3;
+    border: #63f3db solid 1px;
+    
+}
+   /*Aqui es donde definimos que salga el menu cuando pasamos el mouse por el elemento li */
+.menu li:hover > .submenu {
+    display:block;
+    
+    
+    
+   }
+
+/*-----------------------------------Fin del menu desplegable Nutricion-------------------------------------*/
+ 
+
 
 
 /*-------------------------------------lista de recetas en portada------------------------------------------*/
