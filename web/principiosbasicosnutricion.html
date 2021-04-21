@@ -5,27 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principios Básicos Nutrición</title>
+    <link rel="stylesheet" href="css/principiosbasicos.css">
 </head>
 <body>
-    <img src="css/images/Piramide-alimenticia-Gobierno-de-España.jpg" alt="">
-    <h1>NUTRICIÓN Y ALIMENTACIÓN</h1>
-        Principios básicos de la nutrición
-        
-        Algunos principios a tener en cuenta en una alimentación saludable son los siguientes
-        
-        Toda dieta deberá ser completa en su composición: VARIADA, EQUILIBRADA Y ADAPTADA.
-        
-        VARIADA. Debe contener todo tipo de alimentos.
-        EQUILIBRADA. Con aporte de todos los nutrientes necesarios para mantener una buena salud.
-        ADAPTADA. Ajustada a las necesidades de la persona considerando su edad, sexo, actividad, estado de salud, cultura, economía.
-        Se debe consumir las cantidades necesarias y en la proporción adecuada para evitar problemas de peso y enfermedades. Así, la cantidad de alimentos:
-        
-        •SUFICIENTE. Debe cubrir las necesidades calóricas del organismo.
-        •ARMÓNICA. Debe guardar proporción entre los componentes de la dieta.
-        
-        En la alimentación intervienen todos los sentidos, por lo que el acto de comer debe resultar agradable y satisfactorio. No sólo se valora el tipo o la calidad del alimento,también su aspecto, textura, etc. Esto implica una correcta elección, preparación y presentación de los alimentos.
-        
-        </p>
     
+<!-- Empezamos construyendo esta nueva página a la cual nos redirecciona la pagina principal con un header 
+el cual le damos el nombre para identificarlo en css de showcase. Este header va a contener un h2 y un 
+parrafo, ademas de un boton para enlazar a una pagina externa de informacion.-->
+<header class="showcase"> 
+    
+
+    <h2>NOTA DE PRENSA</h2>
+    <p>Recomendaciones de alimentación y nutrición para la población española ante la crisis sanitaria del COVID-19.</p>
+    <a href="https://www.academianutricionydietetica.org/noticia.php?id=113" target="_blank" class="boton">
+      Click aquí <i class="fas fa-chevron-right"></i>
+    </a>
+  </header>
+
+  <!-- ZONA DE LAS NOTICIAS O CONSEJOS -->
+
+  <!-- Hacemos un contenedor div para la parte de arriba con el titulo y un texto explicativo, asi dividimos en bloques para que sea mas facil despues darle formato por separado mediante su identificador. -->
+
+
+  <div class="portadanews">
+
+  <h3>8 principios básicos para la nutrición</h3>
+
+    <p>Cada persona tiene necesidades nutricionales distintas, las cuales dependen de su edad, estilo de vida, estado de salud y, en especial, del tipo de actividad física que practique, pues quienes dedican gran parte de su tiempo al ejercicio requieren aporte extra de calorías para tener adecuado rendimiento y no descompensarse.
+  
+      Las personas que practican algún deporte o entrenan de manera regular necesitan un aporte de nutrientes superior al de quienes llevan una vida sedentaria, sin embargo los principios de la nutrición deportiva pueden adaptarse a todo el mundo puesto que se basan en hábitos saludables.
+      
+      El sujeto físicamente activo debe tener en cuenta que su aporte calórico y nutricional es muy importante para mantener el rendimiento deseado y cumplir los objetivos establecidos. A continuación citamos algunas de las normas más importantes que debes tener en cuenta a la hora de practicar ejercicio físico:</p>
+
+    </div>
+  <!-- Ahora ya viene la parte de las noticias con sus respectivas imagenes , cada una se compone de lo mismo, un titulo, un parrafo y una imagen, en total son 4 en un bloque div y otras 4 en otro bloque div -->
+
+
+  <!-- Primer bloque de 4 consejos -->
+
+  <div class="news">
+    
+    <div>
+      <img src="css/images/alimentacionsaludable.jpg" alt="" />
+      <h3>Alimentacion Saludable</h3>
+      <p> La mayor parte de la energía necesaria durante tu entrenamiento es proporcionada por los hidratos de carbono. Los cereales, las frutas, el arroz y la pasta son importantes fuentes nutricionales para el deportista.
+      </p>
+      
+    </div>
+    <div>
+      <img src="css/images/numerocomidas.png" alt="" />
+      <h3>Número de comidas</h3>
+      <p>Realizar cinco ingestas diarias de un aporte calórico moderado, es mucho más beneficioso que realizar tres grandes ingestas. De esta forma, tus depósitos de carbohidratos no llegarán a agotarse y el gasto calórico derivado de los procesos digestivos será mucho mayor.
+      </p>
+      
+    </div>
+    <div>
+      <img src="css/images/dietayejercicio.jpg" alt="" />
+      <h3>Dieta y ejercicio físico</h3>
+      <p>Si tu objetivo es la pérdida de peso debes tener en cuenta que la unión de dieta y ejercicio físico es lo más adecuado para conseguir tu objetivo. Diferentes estudios demuestran que dieta o ejercicio por separado reducen las posibilidades de éxito en cuanto a pérdida de peso se refiere.
+      </p>
+      
+    </div>
+    <div>
+      <img src="css/images/habitosalimenticios.jpg" alt="" />
+      <h3>Hábitos alimenticios</h3>
+      <p>La clave está en tener unos hábitos alimenticios saludables, que puedas mantener a lo largo de toda tu vida. Las dietas hipocalóricas pueden causar desarreglos metabólicos que perjudiquen tu salud.
+      </p>
+      
+    </div>
+  </div>
+
+  
+
+ <!-- Segundo bloque de 4 consejos -->
+  <div class="news">
+    <div>
+      <img src="css/images/descanso-entrenamiento.jpg" alt="" />
+      <h3>Descanso controlado</h3>
+      <p>Después de un intenso entrenamiento físico debes recuperar tus depósitos de hidratos de carbono lo antes posible; tras el entrenamiento encontramos un “periodo de ventana” de entre 45 minutos y una hora, durante el cual tu organismo asimilará mejor todos los nutrientes que le aportes.
+      </p>
+      
+    </div>
+    <div>
+      <img src="css/images/sales_minerales.jpg" alt="" />
+      <h3>Sales minerales</h3>
+      <p>Durante el ejercicio físico intenso el organismo pierde gran cantidad de sales minerales a través de sudor, con el objetivo de mantener constante la temperatura del cuerpo. Resulta imprescindible llegar correctamente hidratado al inicio del entrenamiento y mantener una correcta hidratación durante y tras el ejercicio.
+      </p>
+      
+    </div>
+    <div>
+      <img src="css/images/cardiovascular.jpg" alt="" />
+      <h3>Entrenamiento cardiovascular</h3>
+      <p>El entrenamiento cardiovascular por intervalos es el más adecuado para generar un alto gasto calórico, si tu condición física es buena, prueba a introducir picos de intensidad máxima, seguidos de periodos de recuperación, con el objetivo de aumentar el gasto calórico de tu sesión de entrenamiento.
+      </p>
+      
+    </div>
+    <div>
+      <img src="css/images/riesgos-dietas-milagro.jpg" alt="" />
+      <h3>Fórmulas mágicas</h3>
+      <p>Ten siempre presente que las fórmulas mágicas no funcionan, pueden inclusive ser perjudiciales para la salud y la clave está en mantener hábitos de vida saludables.
+      </p>
+     
+    </div>
+  </div>
+
+  <!-- Terminaremos la pagina con un banner inferior de publicidad -->
+
+  <!-- Banner inferior -->
+  <section class="banner">
+    <div class="content">
+      <h2>CURSO ONLINE DE ALIMENTACIÓN SALUDABLE</h2>
+      
+      <p>Actualmente consideramos que la nutrición está en auge, y prueba de ello, es que todo el mundo habla de nutrición, sabe de nutrición, publica de nutrición… Llegando a un nivel en el que no sabemos que creernos y que no, a que recomendaciones hacer caso y a cuáles no, si lo estamos haciendo bien o totalmente al revés. Seguro que más de una vez te has sentido frustrado, indignado o decepcionado al enterarte de que un producto no era tan saludable como lo pintaban, al seguir una dieta que descubres que no era buena para tu salud, o al hacer caso a un consejo que te explican que es justamente al revés.
+
+        Por esta razón, la Sociedad Española de Dietética y Ciencias de la Alimentación ha creado un curso 100% online con el objetivo de que aprendas a comer de forma saludable, de aclararte todas esas dudas que tienes en mente y darte las pautas prácticas para que puedas ponerlo en marcha.
+        Gracias a este curso, podrás utilizar la alimentación como una herramienta para ganar calidad de vida. Por supuesto, la premisa principal del curso es basarse en la evidencia científica, y todos y cada uno de sus consejos o recomendaciones han sido contrastados con la ciencia.</p>
+
+        <a href="https://www.classonlive.com/curso-estructurado/ALIMENTACIN-SALUDABLE-PARA-TI-Y-PARA-TODA-TU-FAMILIA" target="_blank" class="boton">
+            Click aquí <i class="fas fa-chevron-right"></i>
+          </a>
+    </div>
+  </section>
+
+  
+
 </body>
 </html>
