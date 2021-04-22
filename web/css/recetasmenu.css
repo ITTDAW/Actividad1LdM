@@ -36,17 +36,11 @@
   /* Aqui damos formato al  showcase, definimos su tamaño y le damos de fondo una imagen acorde con el tema*/
   .showcase {
     width: 100%;
-    height: 400px;
     
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    
+    
     /* Justificamos el contenido al final */
-    justify-content: flex-end;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    color: #1e272e;
+    
     
   }
 
@@ -58,7 +52,7 @@
   /* Aqui viene la parte de la portada con un titulo y una explicacion del contenido de la pagina */
   
   .portada {
-    margin: 10px 10px 20px 20px;
+    margin: 10px  40px;
     text-align: center;
   }
   .portada h3 {
@@ -86,7 +80,8 @@
   
   .recetas img {
     width: 100%;
-    height: 180px;
+    height: 220px;
+
   }
   
   .recetas h3 {
@@ -118,4 +113,21 @@
   }
   .bannerbebe a, p{
       margin-top: 20px;
+  }
+
+  /*  BANNER NIÑOS */
+  .bannerniños {
+    width: 100%;
+    height: 450px;
+    background: url("images/bannerrecetasniños.jpg") no-repeat center center/cover;
+    background-size: contain;
+  }
+  
+  .bannerniños .content {
+      /* Decimos que el contenido del banner solo ocupe la mitad */
+    width: 50%;
+    padding: 30px 0 0 30px;
+  }
+  .bannerniños a, p{
+      margin-top: 10px;
   }

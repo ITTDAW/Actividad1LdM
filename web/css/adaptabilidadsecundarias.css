@@ -1,0 +1,83 @@
+@media (max-width: 1400px) {
+  .banner .content{
+    font-size: 10px;
+  }
+}
+
+
+@media (max-width: 700px) {
+    
+  
+    
+  
+    .recetas  {
+      /* Por debajo de 700px reducimos a 2 columnas  */
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .recetas .content,
+    .recetas .content {
+      width: 80%;
+    }
+  
+    .bannerbebe .content {
+        
+      width: 50%;
+      padding: 100px 0 0 30px;
+    }
+
+    .news {
+      /* Por debajo de 700px reducimos a 2 columnas  */
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .news .content,
+    .news .content {
+      width: 80%;
+    }
+
+    .banner .content{
+      font-size: 10px;
+    }
+  
+    
+   
+  }
+  
+  @media (max-width: 500px) {
+    /* Por debajo de 500 px reducimos a una columna  */
+    .recetas {
+      grid-template-columns: 1fr;
+    }
+  
+    .recetas .content,
+    .recetas .content {
+      width: 100%;
+      padding: 60px 20px;
+    }
+    .bannerniños{
+        font-size: 13px;
+    }
+
+    .bannerbebes{
+        font-size: 13px;
+    }
+
+
+    .news {
+      grid-template-columns: 1fr;
+    }
+  
+    .news .content,
+    .news .content {
+      width: 100%;
+      padding: 60px 20px;
+    }
+
+    .banner .content{
+      font-size: 8px;
+    }
+    
+   
+  }
+  
