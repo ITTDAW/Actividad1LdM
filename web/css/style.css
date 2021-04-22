@@ -235,6 +235,13 @@ a.menu-item-link.Recetas{
     border: #63f3db solid 1px;
     
 }
+
+.menu a.menu-item-link.Recetas:hover {
+  
+    background: #caf7f3;
+    border: #63f3db solid 1px;
+    
+}
    /*Aqui es donde definimos que salga el menu cuando pasamos el mouse por el elemento li */
 .menu li:hover > .submenu {
     display:block;
