@@ -19,33 +19,8 @@ span.logo-sub {
     position: static;
     text-align: center;
 }
-<<<<<<< HEAD
 }
 
-@media (max-width: 720px) {
-  .social {
-    width: 100%;
-  }
-  .newsletter {
-    width: 100%;
-    border-top: 1px solid #d8dac9;
-  }
-  .newsletter-form {
-    max-width: 70%;
-    float: left;
-}
-.link-tip-izq p {
-  font-size: 0.7em;
-
-}
-.tip-tittle {
-  font-size: 1.7em;
-}
-=======
-
-  
->>>>>>> 93bbdc40a50e7815f7f4b27f827b899ce7cd2f55
-}
 
 
 
@@ -57,7 +32,7 @@ colocandose en vertical, y la esconderemos (transform:translateX(suficiente dist
 para esconderla)  para que solamente se vea cuando pulsemos un boton que  se va a introducir en el lado 
 izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos ese boton, el menu aparecera*/
 
-@media (max-width: 1048px) {
+@media (max-width: 1080px) {
     .container{
         margin: 0 auto;
     }
@@ -109,8 +84,11 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
       ul.menu.show {
         transform: translateX(0%);
       }
-
-<<<<<<< HEAD
+      
+      .link-tip-izq p{
+        font-size: 0.7em;
+        height: auto;
+      }
 /*footer*/
 
 .social p {
@@ -131,10 +109,46 @@ p.heading-footer {
     margin: 0 auto;
 }
 }
-=======
-      
-    }
->>>>>>> 93bbdc40a50e7815f7f4b27f827b899ce7cd2f55
+
+@media (max-width: 720px) {
+  .social {
+    width: 100%;
+  }
+  .newsletter {
+    width: 100%;
+    border-top: 1px solid #d8dac9;
+  }
+  .newsletter-form {
+    max-width: 70%;
+    float: left;
+}
+
+
+.tip-tittle {
+  font-size: 1.7em;
+}
+
+.tips{
+  height: 15em;
+  margin-bottom: 150px;
+}
+.link-tip-izq p {
+  font-size: 0.7em;
+
+}
+/*Cuando las imagenes empiezan a comerse el texto en los tips se cambia a display block y se reduce el 
+contenido del div a la mitad, se pone un margin-botton porque sino se come la parte de redes sociales*/
+
+.tips{
+  display: block;
+  width: 50%;
+  height: 50%;
+  margin-bottom: 400px;
+ }
+
+}
+
+
     
     
 
@@ -225,6 +239,7 @@ aside{
 .container ul.menu {
   width: 100%;
 }
+
 }
 
 
@@ -292,14 +307,17 @@ aside{
 
 }
 
+.link-tip-izq p{
+  font-size: 10px;
 }
 
-<<<<<<< HEAD
-=======
+
+
+}
 
 
 
->>>>>>> 93bbdc40a50e7815f7f4b27f827b899ce7cd2f55
+
 
 
 

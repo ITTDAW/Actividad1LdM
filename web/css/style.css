@@ -406,10 +406,12 @@ div.desc {
     height: 20.45em;
 }
 .link-tip-center {
+    
     position: absolute;
     left: 100%;
 }
 .link-tip-center-down {
+    
     position: absolute;
     left: 100%;
     top: 190px;
@@ -430,6 +432,11 @@ span.divisor {
     padding: 10px 0;
     border-bottom: 2px dotted #fff;
 }
+.tip-image{
+    width: 250px;
+    height: 188px;
+}
+
 
 
 /*---------------------------------------------ESTILOS PARA EL FOOTER--------------------------------------*/
