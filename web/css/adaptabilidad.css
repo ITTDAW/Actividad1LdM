@@ -19,8 +19,29 @@ span.logo-sub {
     position: static;
     text-align: center;
 }
-  
 }
+
+@media (max-width: 720px) {
+  .social {
+    width: 100%;
+  }
+  .newsletter {
+    width: 100%;
+    border-top: 1px solid #d8dac9;
+  }
+  .newsletter-form {
+    max-width: 70%;
+    float: left;
+}
+.link-tip-izq p {
+  font-size: 0.7em;
+
+}
+.tip-tittle {
+  font-size: 1.7em;
+}
+}
+
 
 
 
@@ -53,7 +74,7 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
         left: 0;
         background: #1b1b1b;
         justify-content: space-evenly;
-        width: 50%;
+        width: 70%;
         height: 100vh;
         opacity: 0.7;
         /*Con transform translateX movemos el menu entero en el eje de coordenadas X para ocultarlo*/
@@ -64,36 +85,46 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
       
       .container ul.menu li {
         display: block;
-
       }
-
       .menu-item a{
-        font-size: 1.5em;
+        font-size: 1.2em;
         color: #f3f3ee;
-        height: 50px;
         display: block;
-        line-height: 50px;
-        text-transform: uppercase;
-        padding-left: 15px;
-          
+        text-transform: uppercase;    
       }
 
       /* Aqui cambiamos el formato de los submenu para los dispositivos moviles */
       .submenu{
         background: #1b1b1b;
         font-size: 13px;
-        
-
       }
       
-     
-    
       /*Con la clase show llamamos al JS para que interactue con la barra menu y le decimos que vuelva 
       a mover este menu a -20px */
       ul.menu.show {
         transform: translateX(0%);
       }
-    }
+
+/*footer*/
+
+.social p {
+    font-size: 1em;
+}
+.links a{
+    margin: 0 auto;
+}
+
+p.heading-footer {
+    text-align: center;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 1em;
+      
+}
+.newsletter-form {
+    margin: 0 auto;
+}
+}
     
     
 
@@ -108,24 +139,18 @@ en el navegador de Chrome o algun otro programa como va variando la composicion 
 cambiar la resolucion e ir adaptando estos cambios para realizar un posicionamiento de nuestros items correcto*/
 
 @media (min-width: 390px) and (max-width: 844px) and (orientation: landscape) {
-  .menu {
-    max-width: 70%;
-  }
-
+.menu {
+  max-width: 70%;
+}
 .container{
   max-width: 90%;
 }
 aside{
-  width: 100%;
-  
-  
-  
+  width: 100%; 
 }
-.recetas{
-  width: 60%;
-  
- 
-  
+.recetas-mes{
+  width: 100%; 
+  justify-content: center;
 }
 
 .titulo-aside{
@@ -159,10 +184,10 @@ aside{
     
     
   }
-  .recetas{
-    width: 100%;
-  
-  }
+.recetas-mes{
+  width: 100%; 
+  justify-content: center;
+}
 .titulo-aside{
   background: url("images/Thermomix3.jpg");
   background-size: 100% 100%;
@@ -201,25 +226,17 @@ aside{
   
   .menu {
     width: 70%;
-
   }  
 .container{
   max-width: 90%;
 }
 aside{
   width: 100%;
-  
-  
-  
 }
-.recetas{
-  width: 60%;
-  
- 
-  
-}
-
-
+.recetas-mes {
+    width: 100%;
+    justify-content: center;
+  }
 .titulo-aside{
   
   background: url("images/Thermomix3.jpg") no-repeat;
@@ -242,10 +259,7 @@ aside{
   aside{
     width: 100%;
   }
-  .recetas{
-    width: 100%;
-     
-  }
+
 .titulo-aside{
   background: url("images/Thermomix3.jpg");
   background-size:  100% 100%;
@@ -270,15 +284,6 @@ aside{
 
 }
 
-/* 
- Adaptabilidad para pantallas grandes
-*/
-
-@media (min-width: 1281px) {
-  
- 
-  
-}
 
 
 

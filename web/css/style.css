@@ -135,11 +135,6 @@ ul {
     line-height: 150%;
     
 }
-
-
-
-
-
 .is-active a.menu-item-link {
     
     color: #29bb89;
@@ -152,7 +147,6 @@ a.menu-item-link:hover {
 .menu-item {
     
     display: inline-block;
-    line-height: 140%;
 }
 a.menu-item-link {
      /* Crea cajas que son de bloque y en línea de forma simultánea. Una caja de tipo inline-block se comporta 
@@ -265,7 +259,6 @@ a.menu-item-link.Recetas{
 aside {
     /* Se situa en el aside alineado a la derecha para separarlo al máximo de la sección recetas del mes */
     float: right;
-    margin-right: 50px;
     width: 20%;
 }
 
@@ -274,9 +267,9 @@ aside {
    
     text-align: center;
     align-items: center;
-     background: url('images/thermomix2.jpg')  ; /*Colocamos una imagen de fondo */
-     background-size: auto;
-    
+    background: url('images/thermomix2.jpg'); 
+    /*Colocamos una imagen de fondo */
+    background-size: auto;
     margin-bottom: 20px;
     
 }
@@ -393,11 +386,6 @@ div.desc {
 
 
 /*----------------------------------------ESTILOS PARA LOS TIPS DE NUTRICIÓN------------------------------*/
-.tips-container {
-    box-sizing: border-box;
-
-}
-
 .tips {
     /* El valor relative en el atributo position indica que la capa sí forma parte del flujo normal 
     de elementos de la página, por lo que su posición dependerá del lugar donde esté en el código y
@@ -426,6 +414,7 @@ div.desc {
     left: 100%;
     top: 190px;
 }
+
 .tip-tittle {
     font-size: 2em;
     position: relative;
@@ -454,18 +443,20 @@ footer {
     position: relative;
     margin-bottom: 20px;
     padding: 1em;
-    width: 50%; 
+    width: 45%; 
+    margin: 2.5em auto;
     
 }
 .footer-box-left {
     float: left;
+    width: 45%;
     
 }
 /* --------------------------------------------PARTE REDES SOCIALES----------------------------------------*/
 
 .social{
     /*Dejamos un margen de 50px arriba y abajo con esta seccion*/
-    margin: 50px;
+    margin: 50px 0;
 }
 .social p{
     /*Cambiamos el estilo del p de esta seccion*/
@@ -495,44 +486,56 @@ footer {
 /*Fin parte redes sociales*/
 
 
-h3.heading-footer {
+p.heading-footer {
     text-transform: uppercase;
     color: #289672;
-    font-size: 0.95em;
+    
 }
 .newsletter-block {
     overflow: auto;
     display: block;
     height: 2rem;
     padding-bottom: 1em;
-    margin-bottom: .75rem;
+    margin-bottom: 1em;
     display: inline;
 
 }
-.newsletter-form button {
-    padding: 0.8em;
-    width: 33%;
-    border: 1px solid #fff;
-    background-color: #289672;
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 0.9em;
-    font-weight: 400;
-    display: inline;
-    margin-left: 0.5em;
 
+form.subscribe button:hover {
+  background: #134b38;
 }
-.newsletter-email {
+
+form.subscribe input[type=text] {
     color: rgba(90,90,90,.7);
-    font-size: .95rem;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 40%;
+    padding: 10px;
+    font-size: 17px;
     border: 2px solid #289672;
-    padding: 0.8em;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
 }
-a {
+
+form.subscribe button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  border: 2px solid #289672;
+  background-color: #289672;
+  color: white;
+  font-size: 17px;
+  border-left: none;
+  cursor: pointer;
+}
+form.subscribe::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.privacidad a {
     color: #1b1b1b;
+    font-style: italic;
+    font-weight: bold;
     
 }
 
