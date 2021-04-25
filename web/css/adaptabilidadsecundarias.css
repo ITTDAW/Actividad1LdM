@@ -1,3 +1,8 @@
+
+/* En este archivo css vamos a establecer las media queries para las paginas html secundarias que salen de los 
+submenus */
+
+
 @media (max-width: 1400px) {
   .banner .content{
     font-size: 10px;

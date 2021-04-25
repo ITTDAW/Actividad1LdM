@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Registro</title>
     <!-- Llamamos a nuestro archivo JS para la comprobacion de contraseñas. -->
     <script type="text/javascript" src="JS/Contraseñas.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/adaptabilidad.css">
 </head>
-<body>
+
     <body>
+        <div class="formulario">
         <h1>Formulario de registro en Recetamania</h1>
         <!--
             Un formulario está situado dentro de una etiqueta <form> y contiene elementos de formulario que 
@@ -27,15 +30,18 @@
             nuestra funcion de JS Contraseñas y si son iguales se envia el formulario, si son distintas
             no se envia (recordemos que nuestra funcion devuelve un true o false y un mensaje).
         -->
-
-        <form action="Participaenelconcurso.jsp" name="f1" method="post" onsubmit="return comprobarClave()">
+        
+        <form action="Participaenelconcurso.jsp"  name="f1" method="post" onsubmit="return comprobarClave()">
             <!--
                 <fieldset> Genera un marco visible  que encierra los datos del formulario.
                 <legend> Colocado inmediatamente después de una etiqueta <fieldset>, permite colocarle 
                 una etiqueta de texto (título).
             -->
-            <fieldset><legend>Datos personales:</legend>
-                <!--
+            <fieldset class="marco"><legend>Datos para el registro:</legend>
+               
+                <!-- Creamos un primer div para mas tarde dar formato ordenado a nuestros elementos -->
+        <div class="contenedor">
+             <!--
                     <label> Define una etiqueta estática, que normalmente estará asociada con un elemento de 
                     campo de formulario que se identifica mediante el atributo for.
                 -->
@@ -57,7 +63,7 @@
                 <input type="text" name="nombre" />
                 <br />
                 <label for="apellidos">Apellidos: </label>
-                <input type="text" name="Apellidos"/>
+                <input type="text" name="apellidos"/>
                 <br/>
                 <!-- Con el type date desplegaremos un calendario en el formulario que tendrá diferente forma 
                 dependiendo del navegador que uticemos -->
@@ -69,26 +75,29 @@
                 <br/>
                 
                 
-                    <label for="password"> Contraseña:</label>
-                    <!-- Con pattern le exigimos que tipo de caracteres aceptamos -->
-                    <input type="password" name="clave1" size="20"  pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Una contraseña válida es un conjunto de caracteres, donde cada uno consiste de una letra mayúscula o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menos un dígito" required/>
-                    <br>
-                    <label for="password">Repite Contraseña</label>
+                <label for="password"> Contraseña:</label>
+                <!-- Con el type password en este input se escribiran caracteres propios de contraseña -->
+                 <!-- Con pattern le exigimos que tipo de caracteres aceptamos -->
+                <input type="password" name="clave1" size="20"  pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Una contraseña válida es un conjunto de caracteres, donde cada uno consiste de una letra mayúscula o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menos un dígito" required/>
+                 <br>
+                <label for="password">Repite Contraseña</label>
 
-                   <input type="password" name="clave2" size="20"  pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Una contraseña válida es un conjunto de caracteres, donde cada uno consiste de una letra mayúscula o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menos un dígito" required/>
+                <input type="password" name="clave2" size="20"  pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Una contraseña válida es un conjunto de caracteres, donde cada uno consiste de una letra mayúscula o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menos un dígito" required/>
                     
                    
                     
 
-                <!-- 
-                    <input type=”hidden”>, Campo oculto. Puede ser útil para enviar una información al 
-                    servidor que no queremos que sea vista por el usuario.
-                -->
+                
                 <br/>
                 <label for="email">Correo Eléctronico:</label>
                 <input type="email" name="email" required/>
                 <br/>
+                <!-- 
+                    <input type=”hidden”>, Campo oculto. Puede ser útil para enviar una información al 
+                    servidor que no queremos que sea vista por el usuario.
+                -->
                 <input id="identificador" type="hidden" value="123"/>
+        </div>
                 <br/>
                 <!--
                     input type="radio", Se representa como un botón de radio. 
@@ -99,7 +108,8 @@
                     La variable que recogerá el programa y enviará al servidor será
                     estado_civil y el valor enviado será S, C, V o D según el botón de radio seleccionado 
                     por el usuario.
-                -->
+                --> 
+            <div class="segundogrupo">
                 <label for="estado_civil">Estado civil: </label>
                 <br />	
                 <input type="radio" name="estado_civil" value="S" />Soltero/a<br />	
@@ -126,7 +136,7 @@
                     El texto contenido en cada <option> es el valor visible para el usuario.
                     
                     El valor que se enviará al servidor es el que contiene el atributo value de la opción 
-                    seleccionada por el usuario (LUN, MAR, MIE, JUE o VIE).
+                    seleccionada por el usuario (CON, PUB, BUS, TV o FO).
     
                     Por defecto se marcará el primer "option" pero tambien podemos usar el atributo 
                     "selected" para marcar el que nosotros queramos.
@@ -178,8 +188,9 @@
                     borra el contenido de todos los campos del formulario.
                 -->
                 <input type="reset" value="Limpiar formulario"/>
+            </div>
             </fieldset>
         </form>
     </body>
-</body>
+
 </html>

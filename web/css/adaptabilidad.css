@@ -19,6 +19,7 @@ span.logo-sub {
     position: static;
     text-align: center;
 }
+<<<<<<< HEAD
 }
 
 @media (max-width: 720px) {
@@ -40,6 +41,10 @@ span.logo-sub {
 .tip-tittle {
   font-size: 1.7em;
 }
+=======
+
+  
+>>>>>>> 93bbdc40a50e7815f7f4b27f827b899ce7cd2f55
 }
 
 
@@ -105,6 +110,7 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
         transform: translateX(0%);
       }
 
+<<<<<<< HEAD
 /*footer*/
 
 .social p {
@@ -125,6 +131,10 @@ p.heading-footer {
     margin: 0 auto;
 }
 }
+=======
+      
+    }
+>>>>>>> 93bbdc40a50e7815f7f4b27f827b899ce7cd2f55
     
     
 
@@ -284,6 +294,12 @@ aside{
 
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 93bbdc40a50e7815f7f4b27f827b899ce7cd2f55
 
 
 

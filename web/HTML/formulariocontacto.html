@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-   
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/adaptabilidad.css">
 </head>
 <body>
-    <h1>Formulario de contacto</h1>
+    <div class="formulario">
+        <h1>Formulario de contacto</h1>
         <!--
             Un formulario está situado dentro de una etiqueta <form> y contiene elementos de formulario que 
             permiten a nuestros lectores de la pagina web interactuar. 
@@ -21,13 +23,13 @@
             método no es recomendable si los datos son confidenciales. Con el valor "post" los datos se 
             envían en el cuerpo de la petición HTTP (body), por lo que no serán visibles en la URL.
         -->
-        <form action="ContactoAministracion.jsp" method="post">
+        <form  action="ContactoAministracion.jsp" class="contenedor" method="post">
             <!--
                 <fieldset> Genera un marco visible  que encierra los datos del formulario.
                 <legend> Colocado inmediatamente después de una etiqueta <fieldset>, permite colocarle 
                 una etiqueta de texto (título).
             -->
-            <fieldset><legend>Datos personales:</legend>
+            <fieldset class="marco"><legend>Datos personales:</legend>
                 <!--
                     <label> Define una etiqueta estática, que normalmente estará asociada con un elemento de 
                     campo de formulario que se identifica mediante el atributo for.
@@ -49,24 +51,45 @@
                 -->
                 <input type="text" name="nombre" />
                 <br />
-                <label for="apellidos">Apellidos: </label>
-                <input type="text" name="Apellidos"/>
+                <label for="apellidos" >Apellidos: </label>
+                <input type="text" name="Apellidos" class="apellidos"/>
                 <br/>
                 <label for="Asunto">Asunto: </label>
-                <input type="text" name="Asunto"> 
+                <input type="text" name="Asunto" class="Asunto"> 
                 <br/>
                 <br/>
                 <label for="mensaje">Mensaje: </label>
-                <br />	
+                <br />
+                <!--
+                    <textarea>, Se representa como una caja de texto multilínea. Tiene los siguientes atributos:
+    
+                        1) rows: número de filas visibles del campo.
+    
+                        2) cols: ancho del campo.
+    
+                        3) readonly: solo lectura. (este tambien se puede encontrar en los text y en otros)
+                -->	
                 <textarea rows="5" cols="80" name="mensaje"></textarea>
                 
                 <br/>
                 <br/>
+                
+                 <!--
+                    Un checkbox tambien es común para opciones simples de marcar o desmarcar
+                -->	
+             <div class="acepto">
                 <label for="terminos">Acepta los terminos de uso? </label>
+                <br/>
+                 <label for="acepto">He leido y acepto los terminos de uso </label>
+                
+                <input type="checkbox" name="terminos" value="Y" />
+            </div>
                 <br/>	
-                He leido y acepto los terminos de uso <input type="checkbox" name="terminos" value="Y" />
                 <br/>	
-                <br/>	
+                <!--
+                    input type="submit", Se representa como un botón y cuando el usuario hace clic en él, se 
+                    realiza la petición HTTP al programa de servidor especificado en el atributo action.
+                -->
                 <input type="submit" value="Enviar datos" />
                 <!--
                     input type="reset", Se representa como un botón y cuando el usuario hace clic en él, se 
@@ -75,5 +98,6 @@
                 <input type="reset" value="Limpiar formulario" />
             </fieldset>
         </form>
+    </div>
 </body>
 </html>

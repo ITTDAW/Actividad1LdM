@@ -562,5 +562,37 @@ form.subscribe::after {
 /*-------------------------------------------ACABA EL ESTILO DE FOOTER------------------------------------*/
 
 
+/* ----------------AQUI VAMOS A ESTABLECER LOS ESTILOS DE LOS FORMULARIOS------------------------------- */
 
+.formulario h1{
+    text-align: center;
+}
 
+.contenedor{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .contenedor input {
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
+  }
+  .acepto{
+      width: 100%;
+      display:block;
+      text-align: center;
+     
+  }
+  .segundogrupo{
+      text-align: center;
+      
+  }
+
+  /* -------------------------------FIN DE ESTILOS EN LOS FORMULARIOS ------------------------------------*/
