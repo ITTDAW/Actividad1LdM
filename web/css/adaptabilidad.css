@@ -19,6 +19,7 @@ span.logo-sub {
     position: static;
     text-align: center;
 }
+
   
 }
 
@@ -93,6 +94,8 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
       ul.menu.show {
         transform: translateX(0%);
       }
+
+      
     }
     
     
@@ -270,15 +273,9 @@ aside{
 
 }
 
-/* 
- Adaptabilidad para pantallas grandes
-*/
 
-@media (min-width: 1281px) {
-  
- 
-  
-}
+
+
 
 
 
