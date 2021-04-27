@@ -4,9 +4,12 @@ submenus */
 
 
 @media (max-width: 1400px) {
+  /* Esto es para el banner de las paginas secundarias  */
   .banner .content{
     font-size: 10px;
   }
+
+  
 }
 
 
@@ -44,6 +47,21 @@ submenus */
     .banner .content{
       font-size: 10px;
     }
+
+    .quienessomos{
+    
+      font-size: 10px;
+      
+      margin: 100px 0px;
+      
+      
+      
+    }
+    .quienessomos legend{
+        font-size: 15px;
+    }
+
+    
   
     
    
