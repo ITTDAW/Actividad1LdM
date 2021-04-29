@@ -25,11 +25,12 @@
     <header>
         <div class="container">
             <nav>
+                <!--DEntro del nav tenemos el logo y menú, menúmóvil y submenús-->
                 <div class="logo">
                     <a href="http://recetamania">Recetamanía</a>
                     <span class="logo-sub">Recetas sencillas para una vida saludable</span>
                 </div>
-                <!-- Creamos el boton del menu para adaptabilidad a diferentes resoluciones -->
+                <!-- Creamos la hamburguesa del menu para versión móvil-->
                 <div class="menumovil">
                     <i class="fas fa-bars fa-2x"></i>
                 </div>
@@ -37,7 +38,7 @@
                 <!--Menú de páginas-->
                 <ul class="menu">
                     <li class="menu-item is-active"><a href="index.html" class="menu-item-link Inicio">Inicio</a></li>
-                    <li class="menu-item"><a href="#" class="menu-item-link Recetas">Recetas</a>
+                    <li class="menu-item submenu-js"><a href="#" class="menu-item-link Recetas">Recetas <i class="arrow down"></i></a>
                         <!-- start menu desplegable -->
                         <ul class="submenu">
                             <li><a href="HTML/recetasbebes.html" target="_blank">Recetas para bebé</a></li>
@@ -49,7 +50,7 @@
 
                     </li>
 
-                    <li class="menu-item"><a href="#" class="menu-item-link Nutricion">Nutrición</a>
+                    <li class="menu-item submenu-js"><a href="#" class="menu-item-link Nutricion">Nutrición <i class="arrow down"></i></a>
                         <!-- start menu desplegable -->
                         <ul class="submenu">
                             <li><a href="HTML/principiosbasicosnutricion.html" target="_blank">Principios Básicos</a>
@@ -64,7 +65,7 @@
                     <!-- En el siguiente item de la lista, es donde tenemos que introducir la posibilidad de 
                     entrar en el formulario para que el usuario contacte con los administradores de 
                     la pagina web -->
-                    <li class="menu-item"><a href="#" class="menu-item-link Nosotros">Contacto</a>
+                    <li class="menu-item submenu-js"><a href="#" class="menu-item-link Nosotros">Contacto <i class="arrow down"></i></a>
                         <!-- start menu desplegable -->
                         <ul class="submenu">
                             <li><a href="HTML/quienessomos.html" target="_blank">Quienes Somos</a></li>

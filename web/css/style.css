@@ -4,26 +4,19 @@
        de contenido se encogerá para absorber ese ancho extra. Esto típicamente hace mucho más fácil
         dimensionar elementos. */
 
-
+/*Para todo el documento definimos unos estilos muy genéricos*/
 
 * {box-sizing: border-box;}
 
 html {
-    font-weight: 400;
     /* La propiedad overflow permite regular la visiblidad de los contenidos que sobresalen de una caja html. */
     overflow-x: hidden;
+    font-family: serif;
 }
 html, footer, ul {
-    /*
-Un elemento block siempre tiene algo de espacio por encima y debajo, que lo separa de los demás elementos, 
-y no acepta ningún otro elemento a su lado - si no está indicado de otra manera ( float ).*/
+    /*Un elemento block siempre tiene algo de espacio por encima y debajo, que lo separa de los demás elementos, y no acepta ningún otro elemento a su lado - si no está indicado de otra manera ( float ).*/
     display: block;
 }
-h1, h2, h3 {
-    font-family: sans-serif;
-}
-
-   
 body {
     background-color: #f3f3ee;
     color: #1b1b1b;
@@ -31,9 +24,33 @@ body {
     font-size: 1.1em;
     
 }
+/*Definimos el contenedor para toda la página al 90%*/
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+.container::after {
+    /* Both es un keyword que indica que el elemento es movido hacia abajo para limpiar tanto elementos 
+    flotantes de la izquierda como de la derecha. */
+    clear: both;
+    /* La propiedad display: table-cell hace que cualquier elemento se muestre como si fuera una celda
+     de una tabla.  */
+    display: table;
+    content: "";
+}
+h1, h2, h3, a {
+    font-family: sans-serif;
+}
+p {
+    font-size: 1em;
+    /*le damos un alto de líena un poco más espacioso*/
+    line-height: 150%;
+}   
+
 a, a:focus, a:hover {
     text-decoration: none;
 }
+
 header {
     width: 100%;
     /*La posicion sticky obliga a que el header siempre está presente en la pagina web aunque 
@@ -42,43 +59,26 @@ header {
     position: -webkit-sticky;
     top: 0;
     /* La propiedad CSS z-index indica el orden de un elemento posicionado y sus descendientes. 
-    Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos
-     con menor valor. */
+    Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor. Le damos un valor alto. */
     z-index: 1000;
     background-color: #f3f3ee;
     margin-bottom: 20px;
     
 }
-p {
-    font-size: 1.1em;
-    line-height: 150%;
-}
 
-li {
-    text-align:center;
-}
-/*----------------------------------------ESTILOS PARA EL NAV --------------------------------------*/
+/*--ESTILOS PARA EL NAV ---*/
+/*en genérico vamos a darle estilo al nav dentro del contenedor del header*/
 
 nav {
     height: 120px;
     width: 100%;
-    margin: auto;
     display: flex;
     align-items: center;
+    /*para que separe el logo del menú y deje un espacio entre*/
     justify-content: space-between;
     border-bottom: 2px solid #d8dac9;
     
 }
-button {
-    overflow: visible;
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    /* 'inherit' significa que, para un elemento determinado, la propiedad toma el mismo valor computado 
-    que la propiedad del padre del elemento */
-    line-height: inherit;
-}
-
 /*los siguientes estilos son para la tipografia genérica del logo y sub-logo*/
 .logo {
     font-family: Georgia,serif;
@@ -101,37 +101,12 @@ span.logo-sub {
     padding-top: 0.5em;
     display: block;
 }
-/*Definimos el contenedor para toda la página al 90%*/
-.container {
-    max-width: 90%;
-    margin: 0 auto;
-}
-.container::after {
-    /* Both es un keyword que indica que el elemento es movido hacia abajo para limpiar tanto elementos 
-    flotantes de la izquierda como de la derecha. */
-    clear: both;
-    /* La propiedad display: table-cell hace que cualquier elemento se muestre como si fuera una celda
-     de una tabla.  */
-    display: table;
-    content: "";
-}
-
-
-/*Estilos para el boton que aparece en dispositivos moviles*/
-
-.menumovil{
-    /* Muestra el puntero al posicionarnos encima */
-    display: none; 
-    z-index: 2;
-/* Con esto conseguimos hacer invisible el boton, hasta que la media querie actue */
-}
 
 ul {
     /* La propiedad list-style  se utiliza habitualmente cuando no se quiere mostrar ningún 
     marcador en los elementos de una lista: */
     list-style-type: none;
-    display: block;
-    font-size: 1.05em;
+    font-size: 1em;
     line-height: 150%;
     
 }
@@ -144,60 +119,85 @@ a.menu-item-link:hover {
     color: #29bb89;
     
 }
-.menu-item {
-    
+/* Li con inline-block y posición relative*/
+li.menu-item {
+    text-align:center;
     display: inline-block;
+    position: relative;
 }
 a.menu-item-link {
-     /* Crea cajas que son de bloque y en línea de forma simultánea. Una caja de tipo inline-block se comporta 
-    como si fuera de bloque, pero respecto a los elementos que la rodean es una caja en línea */
-    display: inline-block;
     color: #1b1b1b;
-    font-family: sans-serif;
     font-weight: bold;
-    text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.9em;
-    letter-spacing: 1px;
-    padding: 9px 20px 13px 20px;
-    text-align: left;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    padding: 0 25px;
+}
+
+a.Inicio, a.Recetas, a.Nutricion, a.Nosotros, li.search {
     width: auto;
 }
 
-
-a.menu-item-link.Inicio, a.menu-item-link.Recetas, a.menu-item-link.Nutricion, a.menu-item-link.Descubre, a.menu-item-link.Nosotros {
-    width: auto;
+/*para el símbolo de buscar*/
+button {
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    /* 'inherit' significa que, para un elemento determinado, la propiedad toma el mismo valor computado 
+    que la propiedad del padre del elemento */
+    line-height: inherit;
 }
-a.menu-item-link.Recetas{
-   
-    display: inline-block;
+
+/*hamburguesa versión móvil*/
+
+.menumovil{
+    /* Muestra el puntero al posicionarnos encima */
+    display: none; 
+    z-index: 2;
+/* Con esto conseguimos hacer invisible el boton, hasta que la media querie actue */
 }
 
-/* --------------------Aqui vamos a darle formato a nuestro menu desplegable ------------------------------*/
+/* ----MENU DESPLEGABLE-------*/
 
+
+/*para los submenús damos a los elementos padres(li) una posición relative y a los elementos hijos(.submenu) absolute*/
 .submenu  {
     /*Le decimos display none para que no lo muestre hasta que pasemos el mouse por encima del elemento
     que después definiremos*/
     display:none;
-    
     position:absolute;
-    background: #caf7f3;
     padding: 0px;
-    border: #63f3db solid 1px;
+    left: 0;
+    background-color: #f3f3ee;
+    width: 100%;
+    z-index: 1;
     
    }
+.arrow {
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 4px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+ul.submenu a {
+    display: block;
+}
    
    /* items del menu desplegable */
    
 .submenu  li {
     /*Le decimos un ancho minimo para que no se descuadre con nombres mas pequeños*/
     min-width:140px;
-    
-    
     font-family: sans-serif;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 10px;
     font-size: 0.9em;
     
    }
@@ -207,60 +207,33 @@ a.menu-item-link.Recetas{
    
 .submenu a {
     /*Decimos un display block para que se situe en vertical*/
+    color: #1b1b1b;
     display: block;
-   
     padding:5px 5px;
-    border: #63f3db solid 1px;
     /*Le aplicamos una transicion para que los items del menu se seleccionen mas despacio*/
     transition: all .8s;
    }
    
    /* items del menu desplegable al pasar el ratón */
 .submenu a:hover {
-  
-    color: #f8faf9;
-    background:#29bb89;
-    
-}
-    /*fondo al pasar el mouse por encima de Nutricion*/
-.menu a.menu-item-link.Nutricion:hover {
-  
-    background: #caf7f3;
-    border: #63f3db solid 1px;
-    
+    color: #289672;
 }
 
-.menu a.menu-item-link.Recetas:hover {
-  
-    background: #caf7f3;
-    border: #63f3db solid 1px;
-    
-}
-.menu a.menu-item-link.Nosotros:hover {
-  
-    background: #caf7f3;
-    border: #63f3db solid 1px;
-    
-}
    /*Aqui es donde definimos que salga el menu cuando pasamos el mouse por el elemento li */
-.menu li:hover > .submenu {
+.menu li:hover .submenu {
     display:block;
-    
-    
-    
    }
 
-/*-----------------------------------Fin del menu desplegable Nutricion-------------------------------------*/
+/*Fin del menu desplegable Nutricion*/
  
-
-
-
-/*-------------------------------------lista de recetas en portada------------------------------------------*/
+/*---lista de recetas en portada----*/
 .recetas-mes {
     width: 70%;
     float: left;
 }
-/*------------------------------------------------PARTE ASIDE----------------------------------------------*/
+
+
+/*PARTE ASIDE*/
 
 aside {
     /* Se situa en el aside alineado a la derecha para separarlo al máximo de la sección recetas del mes */

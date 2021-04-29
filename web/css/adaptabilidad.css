@@ -34,16 +34,17 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
 
 @media (max-width: 1080px) {
     .container{
+      /*lo centramos horizontalmente*/
         margin: 0 auto;
     }
     .menumovil {
       display: block;
+      /*lo centramos*/
+      align-items: center;
     }
     .menumovil:hover {
         opacity: 0.5;
       }
-/* Decimos que este menu va a tener una ocupacion en la pantalla en principio de estos valores,
- mas tarde para otros dispositivos, los variaremos. */
     ul.menu {
         display: flex;
         flex-direction: column;
@@ -77,6 +78,9 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
       .submenu{
         background: #1b1b1b;
         font-size: 13px;
+      }
+      .submenu li {
+        padding: 0;
       }
       
       /*Con la clase show llamamos al JS para que interactue con la barra menu y le decimos que vuelva 
@@ -292,27 +296,14 @@ aside{
 }
 
 .titulo-aside h2{
-  
   margin-top: 230px;
-
 }
-.inspiracion{
-  align-items: center;
-  float: none;
-}
-
 .menu {
   width: 70%;
- 
-
 }
-
 .link-tip-izq p{
   font-size: 10px;
 }
-
-
-
 }
 
 
