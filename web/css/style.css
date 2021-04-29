@@ -141,12 +141,18 @@ a.Inicio, a.Recetas, a.Nutricion, a.Nosotros, li.search {
 /*para el símbolo de buscar*/
 button {
     overflow: visible;
+    cursor: pointer;
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     /* 'inherit' significa que, para un elemento determinado, la propiedad toma el mismo valor computado 
     que la propiedad del padre del elemento */
     line-height: inherit;
+}
+button:hover {
+    color: #fff;
+    background-color: #289672;
+
 }
 
 /*hamburguesa versión móvil*/

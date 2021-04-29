@@ -1,5 +1,4 @@
-/*MOBILE FIRST es una fórmula para priorizar la visualización en móviles; para cumplirlo se utiliza el 
-min-width y se va adaptando para pantallas más grandes*/
+
 @media (min-width: 992px) {
 .logo a {
     text-decoration: none;
@@ -20,10 +19,6 @@ span.logo-sub {
     text-align: center;
 }
 }
-
-
-
-
 
 /*Cuando se reduce el ancho de pantalla aproximadamente a 1048px encontramos un problema con la 
 barra de navegacion, ya que esta, empieza a pisarse. Por lo tanto, lo que vamos a hacer es que cuando esta
