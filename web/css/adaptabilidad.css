@@ -83,6 +83,16 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
       ul.menu.show {
         transform: translateX(0%);
       }
+
+/*Cuando las imagenes empiezan a comerse el texto en los tips se cambia a display block y se reduce el 
+contenido del div a la mitad, se pone un margin-botton porque sino se come la parte de redes sociales*/
+
+.tips{
+
+  width: 50%;
+  height: 50%;
+  margin-bottom: 400px;
+ }
       
       .link-tip-izq p{
         font-size: 0.7em;
@@ -127,29 +137,12 @@ p.heading-footer {
   font-size: 1.7em;
 }
 
-.tips{
-  height: 15em;
-  margin-bottom: 150px;
-}
 .link-tip-izq p {
   font-size: 0.7em;
 
 }
-/*Cuando las imagenes empiezan a comerse el texto en los tips se cambia a display block y se reduce el 
-contenido del div a la mitad, se pone un margin-botton porque sino se come la parte de redes sociales*/
-
-.tips{
-  display: block;
-  width: 50%;
-  height: 50%;
-  margin-bottom: 400px;
- }
 
 }
-
-
-    
-    
 
 /* 
  Adaptabilidad para Iphone 12 pro en modo horizontal

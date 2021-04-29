@@ -327,6 +327,7 @@ aside {
 
 /*-------------------------------------Segunda fila de recetas---------------------------------------------*/
 .h2-galeria {
+    padding-top: 30px;
     font-family: Georgia;
     color: #1e282f;
     text-transform: none;
@@ -339,6 +340,7 @@ aside {
 }
 .contenedor-galeria {
      border-bottom: 1px solid #d8dac9;
+     padding-bottom: 40px;
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
@@ -388,7 +390,7 @@ div.desc {
     padding: 30px 20px;
     color: #fff;
     text-align: center;
-    height: 20.45em;
+    height: 21.45em;
 }
 .link-tip-center {
     
@@ -399,10 +401,11 @@ div.desc {
     
     position: absolute;
     left: 100%;
-    top: 190px;
+    top: 189px;
 }
 
 .tip-tittle {
+    padding-top: 30px;
     font-size: 2em;
     position: relative;
     display: inline-block;
@@ -444,7 +447,7 @@ footer {
     width: 45%;
     
 }
-/* --------------------------------------------PARTE REDES SOCIALES----------------------------------------*/
+/* ----PARTE REDES SOCIALES-----*/
 
 .social{
     /*Dejamos un margen de 50px arriba y abajo con esta seccion*/
@@ -531,24 +534,35 @@ form.subscribe::after {
     
 }
 
+/*para quitar el float anterior*/
 .footer-copyright {
+    clear: both;
+}
+.copyright {
+    padding-top: 20px;
     text-align: center;
     border-top: 1px solid #D8DAC9;
     clear: both;
     font-size: 0.8em;
     font-family: sans-serif;
     line-height: 170%;
-    margin-top: 40px;
-    padding-top: 20px;
+    
 }
+.footer-enlaces {
+   text-align: center;
+}
+
+.footer-enlaces li {
+    display: inline-block; 
+}
+.pag-pie {
+    color: #1b1b1b;
+    font-size: 0.8em;
+}
+
 .footer-punto {
     color: #7EA684;
     padding: 0 15px;
-}
-.footer-box {
-    float: left;
-    margin-bottom: 0;
-    
 }
 
 /*-------------------------------------------ACABA EL ESTILO DE FOOTER------------------------------------*/
