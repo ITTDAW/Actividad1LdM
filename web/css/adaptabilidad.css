@@ -28,18 +28,13 @@ para esconderla)  para que solamente se vea cuando pulsemos un boton que  se va 
 izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos ese boton, el menu aparecera*/
 
 @media (max-width: 1080px) {
-    .container{
-      /*lo centramos horizontalmente*/
-        margin: 0 auto;
-    }
-    .menumovil {
+  
+    .hamburguesa{
       display: block;
-      /*lo centramos*/
+      /*lo centramos verticalmente*/
       align-items: center;
     }
-    .menumovil:hover {
-        opacity: 0.5;
-      }
+    
     ul.menu {
         display: flex;
         flex-direction: column;
@@ -78,11 +73,11 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
         padding: 0;
       }
       
-      /*Con la clase show llamamos al JS para que interactue con la barra menu y le decimos que vuelva 
-      a mover este menu a -20px */
+      /*Con la clase show llamamos al JS para que interactue con la barra menu */
       ul.menu.show {
         transform: translateX(0%);
       }
+
 
 /*Cuando las imagenes empiezan a comerse el texto en los tips se cambia a display block y se reduce el 
 contenido del div a la mitad, se pone un margin-botton porque sino se come la parte de redes sociales*/
@@ -94,10 +89,10 @@ contenido del div a la mitad, se pone un margin-botton porque sino se come la pa
   margin-bottom: 400px;
  }
       
-      .link-tip-izq p{
-        font-size: 0.7em;
-        height: auto;
-      }
+.link-tip-izq p{
+    font-size: 0.7em;
+    height: auto;
+}
 /*footer*/
 
 .social p {

@@ -159,10 +159,69 @@ button:hover {
 
 .menumovil{
     /* Muestra el puntero al posicionarnos encima */
-    display: none; 
+    cursor: pointer;
+    top: 0;
+    right: 0;
     z-index: 2;
-/* Con esto conseguimos hacer invisible el boton, hasta que la media querie actue */
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    /*propiedades flexbox con dirección row para que el contenido se situe en filas*/
+    display: flex;
+    flex-direction: row;
+    /*centra verticalmente*/
+    align-items: center;
+    /*centra horizontalmente*/
+    justify-content: center;
+    /*Lo reduce a escala*/
+    transform: scale(.3);
+
 }
+.hamburguesa {
+    /* Con esto conseguimos hacer invisible el boton, hasta que la media querie actue */
+    display: none;
+    /*estilo de cada línea*/
+    height: 15%;
+}
+/*con las propiedades after y before creamos otras dos líneas iguales*/
+.hamburguesa::after,
+.hamburguesa::before,
+.hamburguesa {
+    transition: 0.5s;
+    position: absolute;
+    width: 100%;
+    /*Sin la propiedad content no aparecen las líneas*/
+    content: '';
+    background-color: #1b1b1b;
+}
+/*posiciona una línea arriba*/
+.hamburguesa::after {
+    top: 40px;
+    height: 100%;
+}
+/*posiciona una línea abajo*/
+.hamburguesa::before {
+    top: -40px;
+    height: 100%;
+}
+
+/*Animación de la hamburguesa para al clicar que se convierta en X, movemos las líneas de enmedio y de arriba 45 y 90 grados respectivamente, y la de abajo se esconde*/
+.cruz {
+    transition: 0.5s;
+    transform: rotateZ(45deg);
+}
+.cruz::before {
+    transition: 0.5s;
+    top: 0;
+    transform: rotateZ(90deg);
+}
+.cruz::after {
+    transition: 0.5s;
+    top: 0;
+    transform: rotateZ(0deg);
+}
+
+
 
 /* ----MENU DESPLEGABLE-------*/
 
