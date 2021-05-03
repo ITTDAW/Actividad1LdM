@@ -80,11 +80,18 @@
                         <!-- end menu desplegable -->
                     </li>
                     <li class="menu-item search">
-                        <form class="menu-item-buscar" action="/action_page.php">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
+                        <button class="openBtn" onclick="openSearch()"><i class="fa fa-search"></i></button>
                     </li>
                 </ul>
+                <div id="myOverlay" class="overlay">
+                    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                    <div class="overlay-content">
+                        <form class="menu-item-buscar" action="/action_page.php">
+                            <input type="text" placeholder="Busca una receta..." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>

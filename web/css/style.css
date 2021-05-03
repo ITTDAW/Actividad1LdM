@@ -149,10 +149,74 @@ button {
     que la propiedad del padre del elemento */
     line-height: inherit;
 }
-button:hover {
+.search button:hover {
     color: #fff;
     background-color: #289672;
 
+}
+
+/*Vamos a dar estilo overlay al botón de búsqueda*/
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1b1b1b;
+  opacity: 0.9;
+}
+
+.overlay-content {
+  position: relative;
+  top: 40%;
+  width: 80%;
+  text-align: center;
+  margin: 30px auto;
+}
+
+/* Cerrar el botón */
+.overlay .closebtn {
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #d8dac9;
+}
+
+/* Campo de búsqueda */
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 60%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+/* Botón de buscar en el overlay */
+.overlay button {
+  float: left;
+  width: 15%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
 }
 
 /*hamburguesa versión móvil*/

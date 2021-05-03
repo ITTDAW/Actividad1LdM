@@ -64,6 +64,7 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
         text-transform: uppercase;    
       }
 
+
       /* Aqui cambiamos el formato de los submenu para los dispositivos moviles */
       .submenu{
         background: #1b1b1b;
