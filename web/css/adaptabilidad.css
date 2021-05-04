@@ -18,16 +18,17 @@ span.logo-sub {
     position: static;
     text-align: center;
 }
+
 }
 
-/*Cuando se reduce el ancho de pantalla aproximadamente a 1048px encontramos un problema con la 
+/*Cuando se reduce el ancho de pantalla aproximadamente a 1178px encontramos un problema con la 
 barra de navegacion, ya que esta, empieza a pisarse. Por lo tanto, lo que vamos a hacer es que cuando esta
 resolucion se alcance, la barra de menu cambia de disposicion a display block position absolute
 colocandose en vertical, y la esconderemos (transform:translateX(suficiente distancia en pixeles
 para esconderla)  para que solamente se vea cuando pulsemos un boton que  se va a introducir en el lado 
 izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos ese boton, el menu aparecera*/
 
-@media (max-width: 1080px) {
+@media (max-width: 1180px) {
   
     .hamburguesa{
       display: block;
@@ -84,10 +85,8 @@ izquierdo superior y que se pondra a la escucha mediante JS, asi que pulsemos es
 contenido del div a la mitad, se pone un margin-botton porque sino se come la parte de redes sociales*/
 
 .tips{
-
-  width: 50%;
-  height: 50%;
   margin-bottom: 400px;
+  
  }
       
 .link-tip-izq p{
